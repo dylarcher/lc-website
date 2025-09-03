@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Concierge Components - Explore Our Complete Component Library</title>
+    <meta name="description" content="Explore the complete Legacy Concierge component library with interactive examples, implementation guides, and API documentation.">
+    
+    <!-- Import Bridge Web Components -->
+    <script type="module" src="../main.js"></script>
+    
+    <!-- Bridge Theme Core Styles -->
+    <link rel="stylesheet" href="../shared/styles/bridge-core.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-layout.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-responsive.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-pages.css">
+    <link rel="stylesheet" href="../shared/fonts/fonts.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Prism.js for code highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</head>
+
+<body class="bridge-theme explore-components">
+    
+    <!-- Header -->
+    <bridge-header
+        logo="Legacy Concierge"
+        variant="default"
+        sticky="true"
+        background="white"
+    >
+        <nav slot="menu">
+            <bridge-menu>
+                <bridge-menu-item href="../index.html">Home</bridge-menu-item>
+                <bridge-menu-item href="about.html">About</bridge-menu-item>
+                <bridge-menu-item href="services.html">Services</bridge-menu-item>
+                <bridge-menu-item href="portfolio.html">Portfolio</bridge-menu-item>
+                <bridge-menu-item href="blog.html">Blog</bridge-menu-item>
+                <bridge-menu-item href="components.html" active>Components</bridge-menu-item>
+                <bridge-menu-item href="contact.html">Contact</bridge-menu-item>
+            </bridge-menu>
+        </nav>
+    </bridge-header>
+
+    <!-- Hero Section -->
+    <section class="explore-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Legacy Concierge Components</h1>
+                <p class="hero-subtitle">Discover our complete library of modern web components. Each component is built with accessibility, performance, and customization in mind.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Components</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Accessible</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Dependencies</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component Explorer -->
+    <section class="component-explorer">
+        <div class="container">
+            <div class="explorer-layout">
+                
+                <!-- Sidebar Navigation -->
+                <aside class="explorer-sidebar">
+                    <div class="sidebar-header">
+                        <h2>Component Library</h2>
+                        <div class="search-box">
+                            <bridge-input
+                                type="search"
+                                placeholder="Search components..."
+                                id="componentSearch"
+                            ></bridge-input>
+                        </div>
+                    </div>
+                    
+                    <nav class="component-nav">
+                        <!-- Basic Elements -->
+                        <div class="nav-category">
+                            <h3 class="nav-category-title">
+                                <i class="fas fa-cube"></i>
+                                Basic Elements
+                            </h3>
+                            <ul class="nav-list">
+                                <li><a href="#button" class="nav-link active" data-component="button">Button</a></li>
+                                <li><a href="#input" class="nav-link" data-component="input">Input</a></li>
+                                <li><a href="#image" class="nav-link" data-component="image">Image</a></li>
+                                <li><a href="#picture" class="nav-link" data-component="picture">Picture</a></li>
+                                <li><a href="#figure" class="nav-link" data-component="figure">Figure</a></li>
+                                <li><a href="#progress" class="nav-link" data-component="progress">Progress</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Interactive Components -->
+                        <div class="nav-category">
+                            <h3 class="nav-category-title">
+                                <i class="fas fa-mouse-pointer"></i>
+                                Interactive
+                            </h3>
+                            <ul class="nav-list">
+                                <li><a href="#card" class="nav-link" data-component="card">Card</a></li>
+                                <li><a href="#modal" class="nav-link" data-component="modal">Modal</a></li>
+                                <li><a href="#tabs" class="nav-link" data-component="tabs">Tabs</a></li>
+                                <li><a href="#accordion" class="nav-link" data-component="accordion">Accordion</a></li>
+                                <li><a href="#slider" class="nav-link" data-component="slider">Slider</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Layout Sections -->
+                        <div class="nav-category">
+                            <h3 class="nav-category-title">
+                                <i class="fas fa-layer-group"></i>
+                                Layout Sections
+                            </h3>
+                            <ul class="nav-list">
+                                <li><a href="#hero" class="nav-link" data-component="hero">Hero</a></li>
+                                <li><a href="#hero-section" class="nav-link" data-component="hero-section">Hero Section</a></li>
+                                <li><a href="#content-section" class="nav-link" data-component="content-section">Content Section</a></li>
+                                <li><a href="#image-content-section" class="nav-link" data-component="image-content-section">Image Content</a></li>
+                                <li><a href="#service-card" class="nav-link" data-component="service-card">Service Card</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Navigation -->
+                        <div class="nav-category">
+                            <h3 class="nav-category-title">
+                                <i class="fas fa-bars"></i>
+                                Navigation
+                            </h3>
+                            <ul class="nav-list">
+                                <li><a href="#header" class="nav-link" data-component="header">Header</a></li>
+                                <li><a href="#menu" class="nav-link" data-component="menu">Menu</a></li>
+                                <li><a href="#menu-item" class="nav-link" data-component="menu-item">Menu Item</a></li>
+                                <li><a href="#dropdown" class="nav-link" data-component="dropdown">Dropdown</a></li>
+                                <li><a href="#footer" class="nav-link" data-component="footer">Footer</a></li>
+                                <li><a href="#back-to-top" class="nav-link" data-component="back-to-top">Back to Top</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Specialized Modules -->
+                        <div class="nav-category">
+                            <h3 class="nav-category-title">
+                                <i class="fas fa-star"></i>
+                                Specialized
+                            </h3>
+                            <ul class="nav-list">
+                                <li><a href="#pricing" class="nav-link" data-component="pricing">Pricing</a></li>
+                                <li><a href="#testimonial" class="nav-link" data-component="testimonial">Testimonial</a></li>
+                                <li><a href="#testimonials-carousel" class="nav-link" data-component="testimonials-carousel">Testimonial Carousel</a></li>
+                                <li><a href="#contact-form" class="nav-link" data-component="contact-form">Contact Form</a></li>
+                                <li><a href="#portfolio-filter" class="nav-link" data-component="portfolio-filter">Portfolio Filter</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Utility -->
+                        <div class="nav-category">
+                            <h3 class="nav-category-title">
+                                <i class="fas fa-tools"></i>
+                                Utility
+                            </h3>
+                            <ul class="nav-list">
+                                <li><a href="#skip-links" class="nav-link" data-component="skip-links">Skip Links</a></li>
+                                <li><a href="#keyboard-shortcut" class="nav-link" data-component="keyboard-shortcut">Keyboard Shortcuts</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+                
+                <!-- Main Content Area -->
+                <main class="explorer-main">
+                    <div class="component-showcase" id="componentShowcase">
+                        
+                        <!-- Button Component -->
+                        <div class="component-section active" id="button-component">
+                            <div class="component-header">
+                                <h2>Button Component</h2>
+                                <p class="component-description">Versatile button component with multiple variants, sizes, and states. Built with accessibility and user experience in mind.</p>
+                                <div class="component-tags">
+                                    <span class="tag">Interactive</span>
+                                    <span class="tag">Accessible</span>
+                                    <span class="tag">Customizable</span>
+                                </div>
+                            </div>
+                            
+                            <div class="showcase-grid">
+                                <!-- Variants -->
+                                <div class="showcase-item">
+                                    <h3>Button Variants</h3>
+                                    <div class="demo-area">
+                                        <bridge-button variant="primary">Primary</bridge-button>
+                                        <bridge-button variant="secondary">Secondary</bridge-button>
+                                        <bridge-button variant="outline">Outline</bridge-button>
+                                        <bridge-button variant="ghost">Ghost</bridge-button>
+                                        <bridge-button variant="danger">Danger</bridge-button>
+                                    </div>
+                                    <div class="code-example">
+                                        <button class="code-toggle" onclick="toggleCode(this)">
+                                            <i class="fas fa-code"></i> View Code
+                                        </button>
+                                        <pre class="code-block hidden"><code class="language-html">&lt;bridge-button variant="primary"&gt;Primary&lt;/bridge-button&gt;
+&lt;bridge-button variant="secondary"&gt;Secondary&lt;/bridge-button&gt;
+&lt;bridge-button variant="outline"&gt;Outline&lt;/bridge-button&gt;
+&lt;bridge-button variant="ghost"&gt;Ghost&lt;/bridge-button&gt;
+&lt;bridge-button variant="danger"&gt;Danger&lt;/bridge-button&gt;</code></pre>
+                                    </div>
+                                </div>
+                                
+                                <!-- Sizes -->
+                                <div class="showcase-item">
+                                    <h3>Button Sizes</h3>
+                                    <div class="demo-area">
+                                        <bridge-button variant="primary" size="small">Small</bridge-button>
+                                        <bridge-button variant="primary" size="medium">Medium</bridge-button>
+                                        <bridge-button variant="primary" size="large">Large</bridge-button>
+                                    </div>
+                                    <div class="code-example">
+                                        <button class="code-toggle" onclick="toggleCode(this)">
+                                            <i class="fas fa-code"></i> View Code
+                                        </button>
+                                        <pre class="code-block hidden"><code class="language-html">&lt;bridge-button variant="primary" size="small"&gt;Small&lt;/bridge-button&gt;
+&lt;bridge-button variant="primary" size="medium"&gt;Medium&lt;/bridge-button&gt;
+&lt;bridge-button variant="primary" size="large"&gt;Large&lt;/bridge-button&gt;</code></pre>
+                                    </div>
+                                </div>
+                                
+                                <!-- States -->
+                                <div class="showcase-item">
+                                    <h3>Button States</h3>
+                                    <div class="demo-area">
+                                        <bridge-button variant="primary">Normal</bridge-button>
+                                        <bridge-button variant="primary" disabled>Disabled</bridge-button>
+                                        <bridge-button variant="primary" loading>Loading</bridge-button>
+                                    </div>
+                                    <div class="code-example">
+                                        <button class="code-toggle" onclick="toggleCode(this)">
+                                            <i class="fas fa-code"></i> View Code
+                                        </button>
+                                        <pre class="code-block hidden"><code class="language-html">&lt;bridge-button variant="primary"&gt;Normal&lt;/bridge-button&gt;
+&lt;bridge-button variant="primary" disabled&gt;Disabled&lt;/bridge-button&gt;
+&lt;bridge-button variant="primary" loading&gt;Loading&lt;/bridge-button&gt;</code></pre>
+                                    </div>
+                                </div>
+                                
+                                <!-- With Icons -->
+                                <div class="showcase-item">
+                                    <h3>Buttons with Icons</h3>
+                                    <div class="demo-area">
+                                        <bridge-button variant="primary">
+                                            <i class="fas fa-download"></i> Download
+                                        </bridge-button>
+                                        <bridge-button variant="outline">
+                                            <i class="fas fa-share"></i> Share
+                                        </bridge-button>
+                                        <bridge-button variant="secondary">
+                                            Settings <i class="fas fa-cog"></i>
+                                        </bridge-button>
+                                    </div>
+                                    <div class="code-example">
+                                        <button class="code-toggle" onclick="toggleCode(this)">
+                                            <i class="fas fa-code"></i> View Code
+                                        </button>
+                                        <pre class="code-block hidden"><code class="language-html">&lt;bridge-button variant="primary"&gt;
+  &lt;i class="fas fa-download"&gt;&lt;/i&gt; Download
+&lt;/bridge-button&gt;
+&lt;bridge-button variant="outline"&gt;
+  &lt;i class="fas fa-share"&gt;&lt;/i&gt; Share
+&lt;/bridge-button&gt;
+&lt;bridge-button variant="secondary"&gt;
+  Settings &lt;i class="fas fa-cog"&gt;&lt;/i&gt;
+&lt;/bridge-button&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- API Reference -->
+                            <div class="api-reference">
+                                <h3>API Reference</h3>
+                                <div class="api-table-wrapper">
+                                    <table class="api-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Property</th>
+                                                <th>Type</th>
+                                                <th>Default</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>variant</code></td>
+                                                <td><code>string</code></td>
+                                                <td><code>'primary'</code></td>
+                                                <td>Button style: <code>primary | secondary | outline | ghost | danger</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>size</code></td>
+                                                <td><code>string</code></td>
+                                                <td><code>'medium'</code></td>
+                                                <td>Button size: <code>small | medium | large</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>disabled</code></td>
+                                                <td><code>boolean</code></td>
+                                                <td><code>false</code></td>
+                                                <td>Disables the button</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>loading</code></td>
+                                                <td><code>boolean</code></td>
+                                                <td><code>false</code></td>
+                                                <td>Shows loading spinner</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>full-width</code></td>
+                                                <td><code>boolean</code></td>
+                                                <td><code>false</code></td>
+                                                <td>Makes button full width</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <h4>Events</h4>
+                                <div class="api-table-wrapper">
+                                    <table class="api-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Event</th>
+                                                <th>Description</th>
+                                                <th>Detail</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>bridge-button-click</code></td>
+                                                <td>Fired when button is clicked</td>
+                                                <td>Button element</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Component Not Found -->
+                        <div class="component-not-found hidden" id="componentNotFound">
+                            <div class="not-found-content">
+                                <i class="fas fa-construction"></i>
+                                <h3>Component Documentation Coming Soon</h3>
+                                <p>We're working hard to document all components. This one will be available soon!</p>
+                                <bridge-button variant="outline" onclick="showComponent('button')">
+                                    <i class="fas fa-arrow-left"></i> Back to Button
+                                </bridge-button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <bridge-footer
+        columns="4"
+        copyright="© 2025 Legacy Concierge. All rights reserved."
+        background="dark"
+    >
+        <div slot="column-1">
+            <h4>Legacy Concierge</h4>
+            <p>Modern web components for building beautiful, accessible websites with native browser technologies.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        
+        <div slot="column-2">
+            <h4>Components</h4>
+            <ul>
+                <li><a href="#button">Buttons</a></li>
+                <li><a href="#input">Inputs</a></li>
+                <li><a href="#modal">Modals</a></li>
+                <li><a href="#card">Cards</a></li>
+                <li><a href="#tabs">Tabs</a></li>
+            </ul>
+        </div>
+        
+        <div slot="column-3">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Examples</a></li>
+                <li><a href="#">GitHub Repository</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+        
+        <div slot="column-4">
+            <h4>Get Started</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Installation Guide</a></li>
+                <li><a href="#">Quick Start</a></li>
+            </ul>
+        </div>
+    </bridge-footer>
+
+    <!-- Back to Top Button -->
+    <bridge-back-to-top></bridge-back-to-top>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const searchInput = document.getElementById('componentSearch');
+            const showcase = document.getElementById('componentShowcase');
+            const notFound = document.getElementById('componentNotFound');
+            
+            // Navigation handlers
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Update active state
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const component = this.dataset.component;
+                    showComponent(component);
+                });
+            });
+            
+            // Search functionality
+            if (searchInput) {
+                searchInput.addEventListener('bridge-input', function(e) {
+                    const searchTerm = e.detail.value.toLowerCase();
+                    filterComponents(searchTerm);
+                });
+            }
+            
+            // Filter components based on search
+            function filterComponents(searchTerm) {
+                const categories = document.querySelectorAll('.nav-category');
+                
+                categories.forEach(category => {
+                    const links = category.querySelectorAll('.nav-link');
+                    let hasVisibleLinks = false;
+                    
+                    links.forEach(link => {
+                        const componentName = link.textContent.toLowerCase();
+                        const listItem = link.parentElement;
+                        
+                        if (componentName.includes(searchTerm)) {
+                            listItem.style.display = 'block';
+                            hasVisibleLinks = true;
+                        } else {
+                            listItem.style.display = 'none';
+                        }
+                    });
+                    
+                    // Show/hide category
+                    category.style.display = hasVisibleLinks ? 'block' : 'none';
+                });
+            }
+            
+            // Show component function
+            window.showComponent = function(componentName) {
+                // Hide all component sections
+                const sections = showcase.querySelectorAll('.component-section');
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    section.style.display = 'none';
+                });
+                
+                // Show specific component or not found
+                const targetSection = document.getElementById(`${componentName}-component`);
+                if (targetSection) {
+                    showcase.style.display = 'block';
+                    notFound.classList.add('hidden');
+                    targetSection.style.display = 'block';
+                    targetSection.classList.add('active');
+                } else {
+                    showcase.style.display = 'none';
+                    notFound.classList.remove('hidden');
+                }
+                
+                // Update URL hash
+                window.location.hash = componentName;
+            }
+            
+            // Handle URL hash on load
+            const initialComponent = window.location.hash.substring(1) || 'button';
+            showComponent(initialComponent);
+            
+            console.log('🎨 Legacy Concierge Component Explorer loaded!');
+        });
+        
+        // Code toggle functionality
+        function toggleCode(button) {
+            const codeBlock = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (codeBlock.classList.contains('hidden')) {
+                codeBlock.classList.remove('hidden');
+                button.innerHTML = '<i class="fas fa-eye-slash"></i> Hide Code';
+            } else {
+                codeBlock.classList.add('hidden');
+                button.innerHTML = '<i class="fas fa-code"></i> View Code';
+            }
+        }
+        
+        // Smooth scroll for anchor links
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('a[href^="#"]')) {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href').substring(1);
+                showComponent(targetId);
+            }
+        });
+    </script>
+</body>
+</html>

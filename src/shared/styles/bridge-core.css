@@ -1,0 +1,765 @@
+/* Bridge Theme Core Styles */
+/* Based on WordPress Bridge theme converted to vanilla CSS */
+
+/* ===== ACCESSIBILITY STYLES ===== */
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus management */
+:focus {
+  outline: 2px solid var(--bridge-primary, #1abc9c);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--bridge-primary, #1abc9c);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --bridge-primary: #000000;
+    --bridge-secondary: #000000;
+    --bridge-text-light: #000000;
+    --bridge-border-light: #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ensure adequate color contrast */
+::selection {
+  background-color: var(--bridge-primary, #1abc9c);
+  color: white;
+}
+
+/* Dark mode color overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode semantic assignments */
+    --bridge-primary: var(--bridge-primary-dark);
+    --bridge-secondary: var(--bridge-teal-light-1);
+    --bridge-accent: var(--bridge-accent-purple);
+    
+    /* Dark mode text colors */
+    --bridge-text-dark: var(--bridge-cream-2);
+    --bridge-text-light: var(--bridge-teal-light-1);
+    --bridge-text-white: var(--bridge-white);
+    --bridge-text-muted: var(--bridge-gray-light-1);
+    
+    /* Dark mode background colors */
+    --bridge-bg-white: var(--bridge-bg-dark);
+    --bridge-bg-light: var(--bridge-gray-dark);
+    --bridge-bg-dark: var(--bridge-black);
+    --bridge-bg-section: var(--bridge-gray-medium-1);
+    
+    /* Dark mode border colors */
+    --bridge-border-light: var(--bridge-gray-medium-1);
+    --bridge-border-dark: var(--bridge-gray-light-1);
+    
+    /* Dark mode shadows with adjusted opacity */
+    --bridge-shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+    --bridge-shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+    --bridge-shadow-lg: 0 10px 15px rgba(0,0,0,0.4);
+    --bridge-shadow-xl: 0 20px 25px rgba(0,0,0,0.5);
+  }
+}
+
+/* Manual dark mode class override */
+.bridge-theme-dark {
+  /* Dark mode semantic assignments */
+  --bridge-primary: var(--bridge-primary-dark);
+  --bridge-secondary: var(--bridge-teal-light-1);
+  --bridge-accent: var(--bridge-accent-purple);
+  
+  /* Dark mode text colors */
+  --bridge-text-dark: var(--bridge-cream-2);
+  --bridge-text-light: var(--bridge-teal-light-1);
+  --bridge-text-white: var(--bridge-white);
+  --bridge-text-muted: var(--bridge-gray-light-1);
+  
+  /* Dark mode background colors */
+  --bridge-bg-white: var(--bridge-bg-dark);
+  --bridge-bg-light: var(--bridge-gray-dark);
+  --bridge-bg-dark: var(--bridge-black);
+  --bridge-bg-section: var(--bridge-gray-medium-1);
+  
+  /* Dark mode border colors */
+  --bridge-border-light: var(--bridge-gray-medium-1);
+  --bridge-border-dark: var(--bridge-gray-light-1);
+  
+  /* Dark mode shadows */
+  --bridge-shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+  --bridge-shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+  --bridge-shadow-lg: 0 10px 15px rgba(0,0,0,0.4);
+  --bridge-shadow-xl: 0 20px 25px rgba(0,0,0,0.5);
+}
+
+:root {
+  /* Bridge Theme Color Palette - Extracted from README.md */
+  
+  /* Dark Base Colors */
+  --bridge-black: color(srgb 0 0 0);
+  --bridge-dark-blue-1: color(srgb 0.012 0.247 0.290); /* #033F4A */
+  --bridge-dark-blue-2: color(srgb 0.020 0.094 0.122); /* #05181F */
+  --bridge-dark-blue-3: color(srgb 0.024 0.090 0.118); /* #06171E */
+  --bridge-dark-purple: color(srgb 0.027 0.016 0.071); /* #070412 */
+  --bridge-primary-dark: color(srgb 0.031 0.161 0.208); /* #082935 */
+  --bridge-text-dark: color(srgb 0.043 0.161 0.208); /* #0B2935 */
+  
+  /* Medium Colors */
+  --bridge-bg-dark: color(srgb 0.102 0.102 0.102); /* #1A1A1A */
+  --bridge-teal-medium: color(srgb 0.118 0.349 0.388); /* #1E5963 */
+  --bridge-gray-dark: color(srgb 0.122 0.129 0.141); /* #1F2124 */
+  --bridge-gray-medium-1: color(srgb 0.239 0.239 0.239); /* #3D3D3D */
+  --bridge-brown-dark: color(srgb 0.337 0.255 0.196); /* #564132 */
+  --bridge-accent-purple: color(srgb 0.365 0.176 0.902); /* #5D2DE6 */
+  --bridge-gray-blue: color(srgb 0.412 0.447 0.490); /* #69727D */
+  
+  /* Mid-tone Colors */
+  --bridge-gray-medium: color(srgb 0.502 0.502 0.502); /* #808080 */
+  --bridge-brown-medium-1: color(srgb 0.510 0.325 0.298); /* #82534C */
+  --bridge-brown-medium-2: color(srgb 0.510 0.388 0.298); /* #82634C */
+  --bridge-brown-gray: color(srgb 0.553 0.506 0.502); /* #8D8180 */
+  --bridge-teal-light-1: color(srgb 0.580 0.690 0.690); /* #94B0B0 */
+  --bridge-teal-light-2: color(srgb 0.620 0.741 0.733); /* #9EBDBB */
+  --bridge-brown-light: color(srgb 0.627 0.494 0.400); /* #A07E66 */
+  --bridge-gray-light-1: color(srgb 0.659 0.659 0.659); /* #A8A8A8 */
+  
+  /* Light Colors */
+  --bridge-beige-1: color(srgb 0.718 0.675 0.624); /* #B7AC9F */
+  --bridge-beige-2: color(srgb 0.737 0.725 0.710); /* #BCB9B5 */
+  --bridge-gray-light-2: color(srgb 0.804 0.804 0.804); /* #CDCDCD */
+  --bridge-blue-light: color(srgb 0.835 0.847 0.863); /* #D5D8DC */
+  --bridge-cream-1: color(srgb 0.882 0.863 0.824); /* #E1DCD2 */
+  --bridge-cream-2: color(srgb 0.961 0.953 0.929); /* #F5F3ED */
+  --bridge-cream-3: color(srgb 0.965 0.953 0.925); /* #F6F3EC */
+  --bridge-cream-4: color(srgb 0.976 0.969 0.957); /* #F9F7F4 */
+  --bridge-cream-5: color(srgb 0.980 0.965 0.945); /* #FAF6F1 */
+  --bridge-white: color(srgb 1 1 1); /* #FFFFFF */
+  
+  /* OKLCH Support (Modern Color Space) */
+  @supports (color: oklch(0 0 0)) {
+    --bridge-black: oklch(0 0 0);
+    --bridge-dark-blue-1: oklch(0.25 0.08 200);
+    --bridge-dark-blue-2: oklch(0.12 0.05 210);
+    --bridge-dark-blue-3: oklch(0.11 0.05 210);
+    --bridge-dark-purple: oklch(0.08 0.08 280);
+    --bridge-primary-dark: oklch(0.2 0.08 200);
+    --bridge-text-dark: oklch(0.21 0.08 200);
+    
+    --bridge-bg-dark: oklch(0.2 0 0);
+    --bridge-teal-medium: oklch(0.4 0.08 180);
+    --bridge-gray-dark: oklch(0.2 0.02 240);
+    --bridge-gray-medium-1: oklch(0.35 0 0);
+    --bridge-brown-dark: oklch(0.4 0.08 60);
+    --bridge-accent-purple: oklch(0.5 0.25 280);
+    --bridge-gray-blue: oklch(0.5 0.03 240);
+    
+    --bridge-gray-medium: oklch(0.6 0 0);
+    --bridge-brown-medium-1: oklch(0.45 0.08 40);
+    --bridge-brown-medium-2: oklch(0.5 0.08 60);
+    --bridge-brown-gray: oklch(0.6 0.02 40);
+    --bridge-teal-light-1: oklch(0.75 0.05 180);
+    --bridge-teal-light-2: oklch(0.8 0.05 180);
+    --bridge-brown-light: oklch(0.65 0.08 60);
+    --bridge-gray-light-1: oklch(0.75 0 0);
+    
+    --bridge-beige-1: oklch(0.8 0.03 60);
+    --bridge-beige-2: oklch(0.8 0.02 60);
+    --bridge-gray-light-2: oklch(0.85 0 0);
+    --bridge-blue-light: oklch(0.9 0.02 240);
+    --bridge-cream-1: oklch(0.9 0.02 60);
+    --bridge-cream-2: oklch(0.95 0.01 80);
+    --bridge-cream-3: oklch(0.95 0.01 80);
+    --bridge-cream-4: oklch(0.97 0.01 80);
+    --bridge-cream-5: oklch(0.98 0.01 80);
+    --bridge-white: oklch(1 0 0);
+  }
+  
+  /* Semantic Color Assignments */
+  --bridge-primary: var(--bridge-primary-dark);
+  --bridge-secondary: var(--bridge-teal-light-2);
+  --bridge-accent: var(--bridge-accent-purple);
+  
+  /* Text Colors */
+  --bridge-text-dark: var(--bridge-text-dark);
+  --bridge-text-light: var(--bridge-gray-blue);
+  --bridge-text-white: var(--bridge-white);
+  --bridge-text-muted: var(--bridge-gray-medium);
+  
+  /* Background Colors */
+  --bridge-bg-white: var(--bridge-white);
+  --bridge-bg-light: var(--bridge-cream-2);
+  --bridge-bg-dark: var(--bridge-bg-dark);
+  --bridge-bg-section: var(--bridge-cream-4);
+  
+  /* Border Colors */
+  --bridge-border-light: var(--bridge-gray-light-2);
+  --bridge-border-dark: var(--bridge-gray-medium-1);
+  
+  /* Typography */
+  --bridge-font-primary: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bridge-font-secondary: Georgia, 'Times New Roman', serif;
+  
+  /* Typography Scale */
+  --bridge-font-size-xs: 0.75rem;    /* 12px */
+  --bridge-font-size-sm: 0.875rem;   /* 14px */
+  --bridge-font-size-base: 1rem;     /* 16px */
+  --bridge-font-size-lg: 1.125rem;   /* 18px */
+  --bridge-font-size-xl: 1.25rem;    /* 20px */
+  --bridge-font-size-2xl: 1.5rem;    /* 24px */
+  --bridge-font-size-3xl: 1.875rem;  /* 30px */
+  --bridge-font-size-4xl: 2.25rem;   /* 36px */
+  
+  /* Line Heights */
+  --bridge-line-height-tight: 1.2;
+  --bridge-line-height-base: 1.6;
+  --bridge-line-height-loose: 1.8;
+  
+  /* Font Weights */
+  --bridge-font-light: 300;
+  --bridge-font-regular: 400;
+  --bridge-font-medium: 500;
+  --bridge-font-semibold: 600;
+  --bridge-font-bold: 700;
+  
+  /* Spacing System */
+  --bridge-spacing-xs: 0.25rem;   /* 4px */
+  --bridge-spacing-sm: 0.5rem;    /* 8px */
+  --bridge-spacing-md: 1rem;      /* 16px */
+  --bridge-spacing-lg: 1.5rem;    /* 24px */
+  --bridge-spacing-xl: 2rem;      /* 32px */
+  --bridge-spacing-2xl: 3rem;     /* 48px */
+  --bridge-spacing-3xl: 4rem;     /* 64px */
+  --bridge-spacing-4xl: 5rem;     /* 80px */
+  --bridge-spacing-5xl: 8rem;     /* 128px */
+  
+  /* Component Spacing */
+  --bridge-padding-xs: 0.25rem 0.5rem;
+  --bridge-padding-sm: 0.5rem 1rem;
+  --bridge-padding-md: 1rem 1.5rem;
+  --bridge-padding-lg: 1.5rem 2rem;
+  --bridge-padding-xl: 2rem 3rem;
+  
+  /* Container Widths */
+  --bridge-container-sm: 540px;
+  --bridge-container-md: 720px;
+  --bridge-container-lg: 960px;
+  --bridge-container-xl: 1200px;
+  --bridge-container-xxl: 1400px;
+  
+  /* Transitions */
+  --bridge-transition-base: all 0.3s ease;
+  --bridge-transition-fast: all 0.15s ease;
+  --bridge-transition-slow: all 0.5s ease;
+  
+  /* Shadows */
+  --bridge-shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --bridge-shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --bridge-shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --bridge-shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+  
+  /* Focus and interaction states */
+  --bridge-focus-ring: 0 0 0 3px rgba(26, 188, 156, 0.1);
+  --bridge-error-ring: 0 0 0 3px rgba(231, 76, 60, 0.1);
+  --bridge-opacity-disabled: 0.6;
+  
+  /* Component-specific variables */
+  --bridge-textarea-min-height: 6.25rem;
+  
+  /* Border Radius System */
+  --bridge-radius-none: 0;
+  --bridge-radius-xs: 0.125rem;   /* 2px */
+  --bridge-radius-sm: 0.25rem;    /* 4px */
+  --bridge-radius-md: 0.5rem;     /* 8px */
+  --bridge-radius-lg: 0.75rem;    /* 12px */
+  --bridge-radius-xl: 1rem;       /* 16px */
+  --bridge-radius-2xl: 1.5rem;    /* 24px */
+  --bridge-radius-3xl: 2rem;      /* 32px */
+  --bridge-radius-full: 9999px;
+  
+  /* Component Border Radius */
+  --bridge-radius-button: var(--bridge-radius-md);
+  --bridge-radius-card: var(--bridge-radius-lg);
+  --bridge-radius-modal: var(--bridge-radius-xl);
+  --bridge-radius-input: var(--bridge-radius-sm);
+  
+  /* Z-index Layers */
+  --bridge-z-dropdown: 1000;
+  --bridge-z-sticky: 1020;
+  --bridge-z-fixed: 1030;
+  --bridge-z-modal: 1040;
+  --bridge-z-popover: 1050;
+  --bridge-z-tooltip: 1060;
+}
+
+/* Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--bridge-font-size-base);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: var(--bridge-font-primary);
+  font-size: var(--bridge-font-size-base);
+  font-weight: var(--bridge-font-regular);
+  line-height: var(--bridge-line-height-base);
+  color: var(--bridge-text-dark);
+  background-color: var(--bridge-bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: var(--bridge-spacing-sm);
+  font-family: var(--bridge-font-primary);
+  font-weight: var(--bridge-font-semibold);
+  line-height: 1.3;
+  color: var(--bridge-text-dark);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--bridge-spacing-sm);
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: var(--bridge-font-light);
+  color: var(--bridge-text-light);
+  margin-bottom: var(--bridge-spacing-md);
+}
+
+/* Links */
+a {
+  color: var(--bridge-primary);
+  text-decoration: none;
+  transition: var(--bridge-transition-base);
+}
+
+a:hover {
+  color: var(--bridge-secondary);
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: var(--bridge-spacing-sm);
+  padding-left: var(--bridge-spacing-md);
+}
+
+ul ul, ul ol, ol ul, ol ol {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: var(--bridge-spacing-xs);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Forms */
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Bridge Theme Specific Classes */
+.bridge-theme {
+  font-family: var(--bridge-font-primary);
+}
+
+/* Wrapper Structure */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper_inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+.content_inner {
+  position: relative;
+}
+
+/* Container System */
+.container {
+  width: 100%;
+  max-width: var(--bridge-container-xl);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--bridge-spacing-sm);
+  padding-left: var(--bridge-spacing-sm);
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: var(--bridge-container-sm);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--bridge-container-md);
+    padding-right: var(--bridge-spacing-md);
+    padding-left: var(--bridge-spacing-md);
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: var(--bridge-container-lg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: var(--bridge-container-xl);
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: var(--bridge-container-xxl);
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: var(--bridge-spacing-sm);
+  padding-left: var(--bridge-spacing-sm);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Grid System */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(var(--bridge-spacing-sm) * -0.5);
+  margin-left: calc(var(--bridge-spacing-sm) * -0.5);
+}
+
+.col, [class*="col-"] {
+  flex: 1 0 0%;
+  padding-right: calc(var(--bridge-spacing-sm) * 0.5);
+  padding-left: calc(var(--bridge-spacing-sm) * 0.5);
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+/* Column Sizes */
+.col-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+.col-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+.col-3 { flex: 0 0 25%; max-width: 25%; }
+.col-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+.col-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+.col-6 { flex: 0 0 50%; max-width: 50%; }
+.col-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+.col-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+.col-9 { flex: 0 0 75%; max-width: 75%; }
+.col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+.col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+.col-12 { flex: 0 0 100%; max-width: 100%; }
+
+/* Medium breakpoint columns */
+@media (min-width: 768px) {
+  .col-md-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-md-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-md-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-md-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-md-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-md-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-md-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-md-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-md-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-md-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Large breakpoint columns */
+@media (min-width: 992px) {
+  .col-lg-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+  .col-lg-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+  .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-lg-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+  .col-lg-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+  .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-lg-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+  .col-lg-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+  .col-lg-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-lg-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+  .col-lg-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+  .col-lg-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Sections and Layout */
+section {
+  position: relative;
+}
+
+.section-padding {
+  padding-top: var(--bridge-spacing-xxl);
+  padding-bottom: var(--bridge-spacing-xxl);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: var(--bridge-font-bold);
+  color: var(--bridge-text-dark);
+  margin-bottom: var(--bridge-spacing-md);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  font-weight: var(--bridge-font-light);
+  color: var(--bridge-text-light);
+  margin-bottom: var(--bridge-spacing-lg);
+}
+
+/* Background Variations */
+.bg-light {
+  background-color: var(--bridge-bg-light);
+}
+
+.bg-dark {
+  background-color: var(--bridge-bg-dark);
+  color: var(--bridge-text-white);
+}
+
+.bg-dark .section-title,
+.bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6 {
+  color: var(--bridge-text-white);
+}
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Display Utilities */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+
+/* Flexbox Utilities */
+.justify-content-start { justify-content: flex-start; }
+.justify-content-center { justify-content: center; }
+.justify-content-end { justify-content: flex-end; }
+.justify-content-between { justify-content: space-between; }
+.justify-content-around { justify-content: space-around; }
+
+.align-items-start { align-items: flex-start; }
+.align-items-center { align-items: center; }
+.align-items-end { align-items: flex-end; }
+
+/* Margin and Padding Utilities */
+.m-0 { margin: 0; }
+.m-1 { margin: var(--bridge-spacing-xs); }
+.m-2 { margin: var(--bridge-spacing-sm); }
+.m-3 { margin: var(--bridge-spacing-md); }
+.m-4 { margin: var(--bridge-spacing-lg); }
+.m-5 { margin: var(--bridge-spacing-xl); }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--bridge-spacing-xs); }
+.mt-2 { margin-top: var(--bridge-spacing-sm); }
+.mt-3 { margin-top: var(--bridge-spacing-md); }
+.mt-4 { margin-top: var(--bridge-spacing-lg); }
+.mt-5 { margin-top: var(--bridge-spacing-xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--bridge-spacing-xs); }
+.mb-2 { margin-bottom: var(--bridge-spacing-sm); }
+.mb-3 { margin-bottom: var(--bridge-spacing-md); }
+.mb-4 { margin-bottom: var(--bridge-spacing-lg); }
+.mb-5 { margin-bottom: var(--bridge-spacing-xl); }
+
+.p-0 { padding: 0; }
+.p-1 { padding: var(--bridge-spacing-xs); }
+.p-2 { padding: var(--bridge-spacing-sm); }
+.p-3 { padding: var(--bridge-spacing-md); }
+.p-4 { padding: var(--bridge-spacing-lg); }
+.p-5 { padding: var(--bridge-spacing-xl); }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation Classes */
+.fade-in { animation: fadeIn 0.6s ease-out forwards; }
+.slide-up { animation: slideUp 0.6s ease-out forwards; }
+.slide-down { animation: slideDown 0.6s ease-out forwards; }
+.slide-left { animation: slideLeft 0.6s ease-out forwards; }
+.slide-right { animation: slideRight 0.6s ease-out forwards; }
+.zoom-in { animation: zoomIn 0.6s ease-out forwards; }
+
+/* Clearfix */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus Visible */
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+/* Print Styles */
+@media print {
+  *, *::before, *::after {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  
+  a:not(.btn) {
+    text-decoration: underline;
+  }
+  
+  img {
+    page-break-inside: avoid;
+  }
+  
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

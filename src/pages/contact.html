@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bridge Theme</title>
+    <meta name="description" content="Get in touch with our team. We'd love to discuss your project and how we can help.">
+    
+    <!-- Import Bridge Web Components -->
+    <script type="module" src="../main.js"></script>
+    
+    <!-- Bridge Theme Core Styles -->
+    <link rel="stylesheet" href="../shared/styles/bridge-core.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-layout.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-responsive.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-pages.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bridge-theme">
+    <div class="wrapper">
+        <div class="wrapper_inner">
+            
+            <!-- Header -->
+            <bridge-header
+                logo="Bridge Theme"
+                variant="default"
+                sticky="true"
+                background="white"
+            >
+                <nav slot="menu">
+                    <bridge-menu>
+                        <bridge-menu-item href="../index.html">Home</bridge-menu-item>
+                        <bridge-menu-item href="about.html">About</bridge-menu-item>
+                        <bridge-menu-item href="services.html">Services</bridge-menu-item>
+                        <bridge-menu-item href="portfolio.html">Portfolio</bridge-menu-item>
+                        <bridge-menu-item href="blog.html">Blog</bridge-menu-item>
+                        <bridge-menu-item href="contact.html" active>Contact</bridge-menu-item>
+                    </bridge-menu>
+                </nav>
+            </bridge-header>
+
+            <!-- Main Content -->
+            <div class="content">
+                <div class="content_inner">
+                    
+                    <!-- Page Title Section -->
+                    <bridge-hero-section
+                        variant="minimal"
+                        height="40vh"
+                        background="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
+                        overlay="dark"
+                        alignment="center"
+                    >
+                        <h1>Contact Us</h1>
+                        <p>Ready to start your project? Let's discuss how we can help bring your vision to life.</p>
+                    </bridge-hero-section>
+
+                    <!-- Contact Form Section -->
+                    <bridge-content-section layout="two-column" padding="large" animation="fade-up">
+                        <div>
+                            <h2>Get In Touch</h2>
+                            <p class="lead">Ready to start your project? Let's discuss how we can help bring your vision to life.</p>
+                            
+                            <bridge-contact-form action="/contact" method="POST" ajax="true">
+                                <bridge-form-row>
+                                    <bridge-input
+                                        label="First Name"
+                                        type="text"
+                                        name="firstName"
+                                        placeholder="Enter your first name"
+                                        required
+                                    ></bridge-input>
+                                    
+                                    <bridge-input
+                                        label="Last Name"
+                                        type="text"
+                                        name="lastName"
+                                        placeholder="Enter your last name"
+                                        required
+                                    ></bridge-input>
+                                </bridge-form-row>
+                                
+                                <bridge-form-row>
+                                    <bridge-input
+                                        label="Email Address"
+                                        type="email"
+                                        name="email"
+                                        placeholder="Enter your email"
+                                        required
+                                    ></bridge-input>
+                                    
+                                    <bridge-input
+                                        label="Phone Number"
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="Enter your phone number"
+                                    ></bridge-input>
+                                </bridge-form-row>
+                                
+                                <bridge-input
+                                    label="Company"
+                                    type="text"
+                                    name="company"
+                                    placeholder="Enter your company name"
+                                ></bridge-input>
+                                
+                                <bridge-input
+                                    label="Project Type"
+                                    type="select"
+                                    name="projectType"
+                                    required
+                                >
+                                    <option value="">Select project type</option>
+                                    <option value="web-design">Web Design</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-app">Mobile App</option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="other">Other</option>
+                                </bridge-input>
+                                
+                                <bridge-input
+                                    label="Budget Range"
+                                    type="select"
+                                    name="budget"
+                                >
+                                    <option value="">Select budget range</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="50k-plus">$50,000+</option>
+                                </bridge-input>
+                                
+                                <bridge-input
+                                    label="Project Timeline"
+                                    type="select"
+                                    name="timeline"
+                                >
+                                    <option value="">Select timeline</option>
+                                    <option value="asap">ASAP</option>
+                                    <option value="1-month">Within 1 month</option>
+                                    <option value="3-months">Within 3 months</option>
+                                    <option value="6-months">Within 6 months</option>
+                                    <option value="flexible">Flexible</option>
+                                </bridge-input>
+                                
+                                <bridge-input
+                                    label="Message"
+                                    type="textarea"
+                                    name="message"
+                                    placeholder="Tell us about your project, goals, and any specific requirements"
+                                    rows="5"
+                                    required
+                                ></bridge-input>
+                                
+                                <div style="margin: 1rem 0;">
+                                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <input type="checkbox" name="newsletter" value="yes">
+                                        <span>Subscribe to our newsletter for updates and tips</span>
+                                    </label>
+                                </div>
+                                
+                                <div style="margin: 1rem 0;">
+                                    <label style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                        <input type="checkbox" name="privacy" value="yes" required>
+                                        <span style="font-size: 0.875rem; color: var(--bridge-text-light);">
+                                            I agree to the <a href="#privacy" style="color: var(--bridge-primary);">Privacy Policy</a> 
+                                            and consent to having my information stored and processed for the purpose of this inquiry.
+                                        </span>
+                                    </label>
+                                </div>
+                            </bridge-contact-form>
+                        </div>
+                        
+                        <div>
+                            <div class="contact-info">
+                                <h4>Contact Information</h4>
+                                <p>We'd love to hear from you. Choose the best way to get in touch.</p>
+                                
+                                <div class="contact-methods" style="margin: 2rem 0;">
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Office Address</strong>
+                                            <p>123 Bridge Street<br>Suite 400<br>San Francisco, CA 94102</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Phone</strong>
+                                            <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Email</strong>
+                                            <p><a href="mailto:hello@bridgetheme.com">hello@bridgetheme.com</a></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Business Hours</strong>
+                                            <p>Monday - Friday: 9:00 AM - 6:00 PM PST<br>
+                                               Saturday: 10:00 AM - 4:00 PM PST<br>
+                                               Sunday: Closed</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="social-links">
+                                    <h4>Follow Us</h4>
+                                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Map Placeholder -->
+                            <div class="map-container" style="margin-top: 2rem;">
+                                <div class="map-placeholder">
+                                    <i class="fas fa-map" style="font-size: 3rem; color: var(--bridge-primary); margin-bottom: 1rem;"></i>
+                                    <h4>Visit Our Office</h4>
+                                    <p>Located in the heart of San Francisco's tech district</p>
+                                    <bridge-button variant="outline" size="small">
+                                        <a href="https://maps.google.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">
+                                            View on Google Maps
+                                        </a>
+                                    </bridge-button>
+                                </div>
+                            </div>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- FAQ Section -->
+                    <bridge-content-section layout="centered" background="light" padding="large" animation="fade-up">
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                        <p class="section-subtitle">Quick answers to common questions about working with us</p>
+                        
+                        <div style="max-width: 800px; margin: 3rem auto 0;">
+                            <bridge-accordion allow-multiple>
+                                <bridge-accordion-item title="How quickly do you respond to inquiries?" open>
+                                    We typically respond to all inquiries within 24 hours during business days. For urgent matters, you can call us directly and we'll do our best to respond immediately.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="What information should I include in my project inquiry?">
+                                    The more details you provide, the better we can understand your needs. Include information about your business, project goals, target audience, budget range, timeline, and any specific features or requirements you have in mind.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="Do you offer free consultations?">
+                                    Yes! We offer complimentary initial consultations to discuss your project and determine if we're a good fit. This typically involves a 30-60 minute call or meeting to understand your needs and provide preliminary recommendations.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="What happens after I submit this form?">
+                                    After you submit the form, you'll receive an automated confirmation email. Within 24 hours, one of our team members will reach out to schedule a consultation call to discuss your project in detail.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="Can you work with clients remotely?">
+                                    Absolutely! While we're based in San Francisco, we work with clients worldwide. We use modern collaboration tools and communication platforms to ensure smooth project delivery regardless of location.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="What if I'm not sure about my project requirements?">
+                                    That's perfectly fine! Part of our discovery process involves helping you clarify your goals and requirements. We'll ask the right questions and provide guidance to help define the scope of your project.
+                                </bridge-accordion-item>
+                            </bridge-accordion>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Alternative Contact Methods -->
+                    <bridge-content-section layout="default" padding="large" animation="fade-up">
+                        <h2 class="section-title">Other Ways to Connect</h2>
+                        <p class="section-subtitle">Choose the method that works best for you</p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                            <bridge-service-card
+                                icon="fas fa-calendar-alt"
+                                title="Schedule a Call"
+                                variant="minimal"
+                                hover-effect="lift"
+                            >
+                                <p>Book a convenient time for a detailed discussion about your project needs and goals.</p>
+                                <bridge-button slot="action" variant="primary">Book Consultation</bridge-button>
+                            </bridge-service-card>
+                            
+                            <bridge-service-card
+                                icon="fas fa-comments"
+                                title="Live Chat"
+                                variant="minimal"
+                                hover-effect="lift"
+                            >
+                                <p>Get instant answers to your questions through our live chat support during business hours.</p>
+                                <bridge-button slot="action" variant="primary">Start Chat</bridge-button>
+                            </bridge-service-card>
+                            
+                            <bridge-service-card
+                                icon="fas fa-file-alt"
+                                title="Request Proposal"
+                                variant="minimal"
+                                hover-effect="lift"
+                            >
+                                <p>Have a detailed project brief? Send it to us and we'll prepare a comprehensive proposal.</p>
+                                <bridge-button slot="action" variant="primary">Send Brief</bridge-button>
+                            </bridge-service-card>
+                        </div>
+                    </bridge-content-section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <bridge-footer
+                columns="4"
+                copyright="© 2025 Bridge Theme. All rights reserved."
+                background="dark"
+            >
+                <div slot="column-1">
+                    <h4>Bridge Theme</h4>
+                    <p>Modern web components for building beautiful, accessible websites with native browser technologies.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div slot="column-2">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                        <li><a href="mailto:hello@bridgetheme.com">hello@bridgetheme.com</a></li>
+                        <li><a href="#address">123 Bridge Street, SF</a></li>
+                        <li><a href="#hours">Mon-Fri 9AM-6PM PST</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-3">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web-design">Web Design</a></li>
+                        <li><a href="services.html#development">Development</a></li>
+                        <li><a href="services.html#mobile">Mobile Apps</a></li>
+                        <li><a href="services.html#consulting">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-4">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#support">Support Center</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </bridge-footer>
+
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <bridge-back-to-top></bridge-back-to-top>
+
+    <style>
+        .contact-info {
+            background: var(--bridge-bg-light);
+            padding: 2rem;
+            border-radius: 1rem;
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--bridge-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--bridge-text-dark);
+        }
+
+        .contact-item p {
+            margin: 0;
+            color: var(--bridge-text-light);
+            line-height: 1.5;
+        }
+
+        .contact-item a {
+            color: var(--bridge-primary);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links h4 {
+            margin-bottom: 1rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--bridge-primary);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--bridge-transition-base);
+        }
+
+        .social-link:hover {
+            background: var(--bridge-secondary);
+            transform: translateY(-2px);
+        }
+
+        .map-container {
+            background: var(--bridge-bg-light);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+
+        .map-placeholder {
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--bridge-text-light);
+        }
+
+        .map-placeholder h4 {
+            margin: 0 0 1rem;
+            color: var(--bridge-text-dark);
+        }
+
+        .map-placeholder p {
+            margin: 0 0 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info {
+                position: static;
+                margin-top: 2rem;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+            
+            .contact-icon {
+                margin: 0 auto;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle form submission
+            document.addEventListener('bridge-form-submit', function(e) {
+                console.log('Contact form submitted:', e.detail);
+                
+                // Here you would normally send the form data to your server
+                // For demo purposes, we'll just show a success message
+                setTimeout(() => {
+                    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                }, 1000);
+            });
+
+            console.log('🌉 Contact page loaded!');
+        });
+    </script>
+</body>
+</html>

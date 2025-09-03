@@ -1,0 +1,65 @@
+/* Bridge Theme Font Families */
+/* Master font file importing all custom fonts */
+
+/* Import Playfair Display font family */
+@import url('./playfair-display/playfair-display.css');
+
+/* Import Sackers Gothic font family */
+@import url('./sackers/sackers-gothic.css');
+
+/* Font Stack Variables */
+:root {
+  /* Primary serif fonts */
+  --font-playfair: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+  --font-sackers: 'Sackers Gothic', 'Times New Roman', Times, serif;
+  
+  /* Font stacks for different use cases */
+  --font-display: var(--font-playfair); /* For headings and display text */
+  --font-serif: var(--font-playfair); /* For body text when serif is needed */
+  --font-accent: var(--font-sackers); /* For special accent text */
+  
+  /* Font weights mapping */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+}
+
+/* Base Typography Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+}
+
+/* Responsive Typography Helpers */
+@media (max-width: 768px) {
+  /* Ensure fonts load properly on mobile */
+  .font-display,
+  .font-serif,
+  .font-accent {
+    font-display: swap;
+  }
+}
+
+/* Performance optimization */
+@supports (font-display: swap) {
+  @font-face {
+    font-display: swap;
+  }
+}
+
+/* Preload hints for critical fonts */
+/* Add these link tags to your HTML head for performance:
+<link rel="preload" href="shared/fonts/playfair-display/playfair-display-400-normal.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="shared/fonts/sackers/sackers-gothic-std.woff2" as="font" type="font/woff2" crossorigin>
+*/

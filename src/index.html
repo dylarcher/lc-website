@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bridge Theme - Modernized with Web Components</title>
+
+    <!-- Import Bridge Web Components -->
+    <script type="module" src="main.js"></script>
+    
+    <!-- Bridge Theme Styles -->
+    <link rel="stylesheet" href="shared/styles/bridge-core.css">
+    <link rel="stylesheet" href="shared/styles/bridge-pages.css">
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <bridge-hero
+      variant="centered"
+      height="100vh"
+      background="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
+      overlay="gradient-dark"
+    >
+      <h1 slot="title">Bridge Theme Reimagined</h1>
+      <p slot="subtitle">Modern Web Components for Next-Generation Websites</p>
+      <div slot="actions">
+        <bridge-button variant="primary" size="large">
+          <a href="pages/components.html" class="button-link">Explore Components</a>
+        </bridge-button>
+        <bridge-button variant="outline" size="large"
+          >View Documentation</bridge-button
+        >
+      </div>
+    </bridge-hero>
+
+    <!-- Features Section -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Features</h2>
+        <div class="features-grid">
+          <bridge-card
+            title="Modern Architecture"
+            variant="elevated"
+            hover-effect="lift"
+          >
+            Built with vanilla web components using modern JavaScript and web
+            standards.
+            <bridge-button slot="actions" variant="primary"
+              >Learn More</bridge-button
+            >
+          </bridge-card>
+
+          <bridge-card
+            title="Accessibility First"
+            variant="elevated"
+            hover-effect="lift"
+          >
+            All components include keyboard navigation, ARIA attributes, and
+            screen reader support.
+            <bridge-button slot="actions" variant="primary"
+              >Learn More</bridge-button
+            >
+          </bridge-card>
+
+          <bridge-card
+            title="Highly Customizable"
+            variant="elevated"
+            hover-effect="lift"
+          >
+            Easy theming with CSS custom properties and extensive configuration
+            options.
+            <bridge-button slot="actions" variant="primary"
+              >Learn More</bridge-button
+            >
+          </bridge-card>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section class="progress-section">
+      <div class="container">
+        <h2 class="section-title">Our Expertise</h2>
+        <div class="progress-container">
+          <bridge-progress value="95" label="Web Design" show-percentage>
+          </bridge-progress>
+
+          <bridge-progress
+            value="90"
+            label="Frontend Development"
+            show-percentage
+          >
+          </bridge-progress>
+
+          <bridge-progress value="85" label="User Experience" show-percentage>
+          </bridge-progress>
+
+          <bridge-progress
+            value="80"
+            label="Performance Optimization"
+            show-percentage
+          >
+          </bridge-progress>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-grid">
+          <article class="portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="E-commerce Platform"
+              loading="lazy"
+            >
+            <div class="portfolio-item-content">
+              <div class="portfolio-item-category">Web Development</div>
+              <h3 class="portfolio-item-title">E-commerce Platform</h3>
+              <p class="portfolio-item-description">Modern online shopping experience with advanced features</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Mobile Banking App"
+              loading="lazy"
+            >
+            <div class="portfolio-item-content">
+              <div class="portfolio-item-category">UI/UX Design</div>
+              <h3 class="portfolio-item-title">Mobile Banking App</h3>
+              <p class="portfolio-item-description">Secure and intuitive mobile banking interface</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Analytics Dashboard"
+              loading="lazy"
+            >
+            <div class="portfolio-item-content">
+              <div class="portfolio-item-category">Data Visualization</div>
+              <h3 class="portfolio-item-title">Analytics Dashboard</h3>
+              <p class="portfolio-item-description">Real-time business insights and reporting platform</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Healthcare System"
+              loading="lazy"
+            >
+            <div class="portfolio-item-content">
+              <div class="portfolio-item-category">Web Application</div>
+              <h3 class="portfolio-item-title">Healthcare System</h3>
+              <p class="portfolio-item-description">Comprehensive patient management platform</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="Brand Identity"
+              loading="lazy"
+            >
+            <div class="portfolio-item-content">
+              <div class="portfolio-item-category">Branding</div>
+              <h3 class="portfolio-item-title">Brand Identity</h3>
+              <p class="portfolio-item-description">Complete visual identity system and guidelines</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <img
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              alt="SaaS Platform"
+              loading="lazy"
+            >
+            <div class="portfolio-item-content">
+              <div class="portfolio-item-category">Product Design</div>
+              <h3 class="portfolio-item-title">SaaS Platform</h3>
+              <p class="portfolio-item-description">Cloud-based business solution with modern interface</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-light">
+      <div class="container">
+        <h2 class="section-title">What Clients Say</h2>
+        <div class="testimonials-grid">
+          <bridge-testimonial
+            variant="card"
+            author="Sarah Johnson"
+            position="Product Manager"
+            company="TechStart Inc"
+            rating="5"
+            avatar="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80"
+          >
+            "The web components approach has revolutionized our development
+            process. Clean, modular, and incredibly flexible."
+          </bridge-testimonial>
+
+          <bridge-testimonial
+            variant="card"
+            author="Michael Chen"
+            position="Lead Developer"
+            company="Innovation Labs"
+            rating="5"
+            avatar="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80"
+          >
+            "Outstanding performance and accessibility. These components have
+            become our go-to solution for all projects."
+          </bridge-testimonial>
+
+          <bridge-testimonial
+            variant="card"
+            author="Emily Rodriguez"
+            position="UX Director"
+            company="Design Studio"
+            rating="5"
+            avatar="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&h=60&q=80"
+          >
+            "Beautiful design system with excellent attention to user experience
+            details. Highly recommended!"
+          </bridge-testimonial>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <bridge-accordion allow-multiple>
+            <bridge-accordion-item title="What are web components?" open>
+              Web components are a set of web platform APIs that allow you to
+              create custom, reusable HTML elements. They provide encapsulation,
+              reusability, and interoperability across different frameworks and
+              libraries.
+            </bridge-accordion-item>
+
+            <bridge-accordion-item
+              title="Are these components framework-agnostic?"
+            >
+              Yes! These are vanilla web components built with native browser
+              APIs. They work with any framework (React, Vue, Angular) or no
+              framework at all.
+            </bridge-accordion-item>
+
+            <bridge-accordion-item title="How do I customize the styling?">
+              All components use CSS custom properties for theming. You can
+              override the design tokens in your CSS to match your brand colors
+              and styling preferences.
+            </bridge-accordion-item>
+
+            <bridge-accordion-item title="What about browser support?">
+              The components work in all modern browsers (Chrome 54+, Firefox
+              63+, Safari 10.1+, Edge 79+). For older browsers, you can use
+              polyfills.
+            </bridge-accordion-item>
+
+            <bridge-accordion-item title="Are the components accessible?">
+              Absolutely! All components follow WCAG guidelines and include
+              keyboard navigation, proper ARIA attributes, and screen reader
+              support.
+            </bridge-accordion-item>
+          </bridge-accordion>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="bg-light">
+      <div class="container">
+        <h2 class="section-title">Choose Your Plan</h2>
+        <bridge-pricing columns="3">
+          <bridge-pricing-card
+            title="Starter"
+            price="29"
+            period="month"
+            currency="$"
+          >
+            <span slot="description"
+              >Perfect for small projects and personal use</span
+            >
+            <li slot="features">All Components</li>
+            <li slot="features">Basic Support</li>
+            <li slot="features">Documentation</li>
+            <li slot="features" class="unavailable">Priority Support</li>
+            <li slot="features" class="unavailable">Custom Components</li>
+          </bridge-pricing-card>
+
+          <bridge-pricing-card
+            title="Professional"
+            price="79"
+            period="month"
+            currency="$"
+            featured
+            variant="gradient"
+          >
+            <span slot="description"
+              >Best for growing businesses and teams</span
+            >
+            <li slot="features">All Components</li>
+            <li slot="features">Priority Support</li>
+            <li slot="features">Documentation</li>
+            <li slot="features">Advanced Examples</li>
+            <li slot="features" class="unavailable">Custom Components</li>
+          </bridge-pricing-card>
+
+          <bridge-pricing-card
+            title="Enterprise"
+            price="199"
+            period="month"
+            currency="$"
+          >
+            <span slot="description"
+              >For large organizations with custom needs</span
+            >
+            <li slot="features">All Components</li>
+            <li slot="features">24/7 Support</li>
+            <li slot="features">Full Documentation</li>
+            <li slot="features">Advanced Examples</li>
+            <li slot="features">Custom Components</li>
+          </bridge-pricing-card>
+        </bridge-pricing>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section>
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-form-container">
+          <bridge-input
+            label="Full Name"
+            type="text"
+            placeholder="Enter your full name"
+            required
+          >
+          </bridge-input>
+
+          <bridge-input
+            label="Email Address"
+            type="email"
+            placeholder="Enter your email"
+            required
+          >
+          </bridge-input>
+
+          <bridge-input
+            label="Company"
+            type="text"
+            placeholder="Enter your company name"
+          >
+          </bridge-input>
+
+          <bridge-input
+            label="Message"
+            type="textarea"
+            placeholder="Tell us about your project"
+          >
+          </bridge-input>
+
+          <div class="contact-form-actions">
+            <bridge-button variant="primary" size="large"
+              >Send Message</bridge-button
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Modal -->
+    <bridge-modal id="info-modal" title="Component Information" size="large">
+      <bridge-tabs>
+        <bridge-tab-item title="Overview">
+          <h3>Modern Web Components</h3>
+          <p>
+            These components are built using native web standards and provide a
+            solid foundation for modern web development. They're designed to be
+            lightweight, accessible, and easy to integrate into any project.
+          </p>
+        </bridge-tab-item>
+
+        <bridge-tab-item title="Features">
+          <ul>
+            <li>Native web components (no framework dependencies)</li>
+            <li>Full accessibility support (WCAG compliant)</li>
+            <li>Customizable with CSS custom properties</li>
+            <li>TypeScript definitions included</li>
+            <li>Comprehensive documentation</li>
+          </ul>
+        </bridge-tab-item>
+
+        <bridge-tab-item title="Browser Support">
+          <p>Components work in all modern browsers:</p>
+          <ul>
+            <li>Chrome 54+</li>
+            <li>Firefox 63+</li>
+            <li>Safari 10.1+</li>
+            <li>Edge 79+</li>
+          </ul>
+        </bridge-tab-item>
+      </bridge-tabs>
+
+      <div slot="footer">
+        <bridge-button
+          onclick="document.getElementById('info-modal').close()"
+          variant="outline"
+        >
+          Close
+        </bridge-button>
+        <bridge-button
+          onclick="alert('Opening documentation...'); document.getElementById('info-modal').close()"
+          variant="primary"
+        >
+          View Documentation
+        </bridge-button>
+      </div>
+    </bridge-modal>
+
+    <!-- Footer -->
+    <footer class="footer-content">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3 class="footer-title">
+              Bridge Theme
+            </h3>
+            <p class="footer-description">
+              Modern web components for building beautiful, accessible websites
+              with native browser technologies.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-section-title">Components</h4>
+            <ul class="footer-list">
+              <li>
+                <a href="#" class="footer-link">Elements</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Components</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Blocks</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Templates</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-section-title">Resources</h4>
+            <ul class="footer-list">
+              <li>
+                <a href="#" class="footer-link">Documentation</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Examples</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">GitHub</a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="document.getElementById('info-modal').open(); return false;"
+                  class="footer-link"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-section-title">Support</h4>
+            <ul class="footer-list">
+              <li>
+                <a href="#" class="footer-link">Help Center</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Community</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">Changelog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Bridge Theme Web Components. Built with ❤️ and vanilla
+            JavaScript.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Demo functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        // Component event listeners for demonstration
+        document.addEventListener("bridge-button-click", (e) => {
+          console.log("Bridge button clicked:", e.detail);
+        });
+
+        document.addEventListener("portfolio-item-click", (e) => {
+          console.log("Portfolio item clicked:", e.detail);
+          // Could open a modal or navigate to project detail
+        });
+
+        document.addEventListener("pricing-select", (e) => {
+          alert(
+            `Selected ${e.detail.title} plan for ${e.detail.currency}${e.detail.price}/${e.detail.period}`
+          );
+        });
+
+        document.addEventListener("tab-change", (e) => {
+          console.log("Tab changed to:", e.detail.activeIndex);
+        });
+
+        document.addEventListener("accordion-toggle", (e) => {
+          console.log("Accordion toggled:", e.detail.title, e.detail.open);
+        });
+
+        console.log("🌉 Bridge Theme with Web Components loaded!");
+      });
+    </script>
+  </body>
+</html>

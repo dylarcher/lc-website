@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Bridge Theme</title>
+    <meta name="description" content="Explore our comprehensive range of web development and design services">
+    
+    <!-- Import Bridge Web Components -->
+    <script type="module" src="../main.js"></script>
+    
+    <!-- Bridge Theme Core Styles -->
+    <link rel="stylesheet" href="../shared/styles/bridge-core.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-layout.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-responsive.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-pages.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bridge-theme">
+    <div class="wrapper">
+        <div class="wrapper_inner">
+            
+            <!-- Header -->
+            <bridge-header
+                logo="Bridge Theme"
+                variant="default"
+                sticky="true"
+                background="white"
+            >
+                <nav slot="menu">
+                    <bridge-menu>
+                        <bridge-menu-item href="../index.html">Home</bridge-menu-item>
+                        <bridge-menu-item href="about.html">About</bridge-menu-item>
+                        <bridge-menu-item href="services.html" active>Services</bridge-menu-item>
+                        <bridge-menu-item href="portfolio.html">Portfolio</bridge-menu-item>
+                        <bridge-menu-item href="blog.html">Blog</bridge-menu-item>
+                        <bridge-menu-item href="contact.html">Contact</bridge-menu-item>
+                    </bridge-menu>
+                </nav>
+            </bridge-header>
+
+            <!-- Main Content -->
+            <div class="content">
+                <div class="content_inner">
+                    
+                    <!-- Page Title Section -->
+                    <bridge-hero-section
+                        variant="minimal"
+                        height="50vh"
+                        background="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
+                        overlay="gradient"
+                        alignment="center"
+                    >
+                        <h1>Our Services</h1>
+                        <p>Comprehensive web solutions tailored to your business needs</p>
+                    </bridge-hero-section>
+
+                    <!-- Main Services Section -->
+                    <bridge-content-section layout="default" padding="large" animation="fade-up">
+                        <h2 class="section-title">What We Offer</h2>
+                        <p class="section-subtitle">Professional services designed to bring your digital vision to life</p>
+                        
+                        <div class="service-cards-grid">
+                            <bridge-service-card
+                                icon="fas fa-palette"
+                                title="Web Design"
+                                variant="default"
+                                hover-effect="lift"
+                            >
+                                <p>Creative and modern design solutions that captivate your audience and reflect your brand identity.</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> UI/UX Design</li>
+                                    <li><i class="fas fa-check"></i> Responsive Layouts</li>
+                                    <li><i class="fas fa-check"></i> Brand Integration</li>
+                                    <li><i class="fas fa-check"></i> Prototyping</li>
+                                </ul>
+                                <bridge-button slot="action" variant="primary">Learn More</bridge-button>
+                            </bridge-service-card>
+                            
+                            <bridge-service-card
+                                icon="fas fa-code"
+                                title="Web Development"
+                                variant="default"
+                                hover-effect="lift"
+                            >
+                                <p>Custom web applications built with cutting-edge technologies and modern development practices.</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> Frontend Development</li>
+                                    <li><i class="fas fa-check"></i> Backend Solutions</li>
+                                    <li><i class="fas fa-check"></i> API Integration</li>
+                                    <li><i class="fas fa-check"></i> Performance Optimization</li>
+                                </ul>
+                                <bridge-button slot="action" variant="primary">Learn More</bridge-button>
+                            </bridge-service-card>
+                            
+                            <bridge-service-card
+                                icon="fas fa-mobile-alt"
+                                title="Mobile Development"
+                                variant="default"
+                                hover-effect="lift"
+                            >
+                                <p>Native and cross-platform mobile applications that provide exceptional user experiences.</p>
+                                <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> iOS Development</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Android Development</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> React Native</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Progressive Web Apps</li>
+                                </ul>
+                                <bridge-button slot="action" variant="primary">Learn More</bridge-button>
+                            </bridge-service-card>
+                            
+                            <bridge-service-card
+                                icon="fas fa-rocket"
+                                title="Digital Strategy"
+                                variant="default"
+                                hover-effect="lift"
+                            >
+                                <p>Strategic consulting to help you navigate the digital landscape and achieve your business goals.</p>
+                                <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Digital Transformation</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Technology Consulting</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Project Planning</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> ROI Analysis</li>
+                                </ul>
+                                <bridge-button slot="action" variant="primary">Learn More</bridge-button>
+                            </bridge-service-card>
+                            
+                            <bridge-service-card
+                                icon="fas fa-search"
+                                title="SEO & Marketing"
+                                variant="default"
+                                hover-effect="lift"
+                            >
+                                <p>Comprehensive SEO and digital marketing services to improve your online visibility and reach.</p>
+                                <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Search Engine Optimization</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Content Marketing</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Social Media Management</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Analytics & Reporting</li>
+                                </ul>
+                                <bridge-button slot="action" variant="primary">Learn More</bridge-button>
+                            </bridge-service-card>
+                            
+                            <bridge-service-card
+                                icon="fas fa-headset"
+                                title="Support & Maintenance"
+                                variant="default"
+                                hover-effect="lift"
+                            >
+                                <p>Ongoing support and maintenance services to keep your digital assets running smoothly.</p>
+                                <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> 24/7 Technical Support</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Regular Updates</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Security Monitoring</li>
+                                    <li><i class="fas fa-check" style="color: var(--bridge-primary); margin-right: 0.5rem;"></i> Performance Optimization</li>
+                                </ul>
+                                <bridge-button slot="action" variant="primary">Learn More</bridge-button>
+                            </bridge-service-card>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Process Section -->
+                    <bridge-content-section layout="default" background="light" padding="large" animation="fade-up">
+                        <h2 class="section-title">Our Process</h2>
+                        <p class="section-subtitle">A proven methodology that delivers results</p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                            <div class="process-step" style="text-align: center; position: relative;">
+                                <div class="step-number">01</div>
+                                <h3 style="margin: 1rem 0;">Discovery</h3>
+                                <p>We start by understanding your business, goals, and target audience through comprehensive research and analysis.</p>
+                            </div>
+                            
+                            <div class="process-step" style="text-align: center; position: relative;">
+                                <div class="step-number">02</div>
+                                <h3 style="margin: 1rem 0;">Strategy</h3>
+                                <p>Based on our findings, we develop a tailored strategy that aligns with your objectives and market opportunities.</p>
+                            </div>
+                            
+                            <div class="process-step" style="text-align: center; position: relative;">
+                                <div class="step-number">03</div>
+                                <h3 style="margin: 1rem 0;">Design</h3>
+                                <p>Our creative team brings your vision to life with stunning designs that engage users and drive conversions.</p>
+                            </div>
+                            
+                            <div class="process-step" style="text-align: center; position: relative;">
+                                <div class="step-number">04</div>
+                                <h3 style="margin: 1rem 0;">Development</h3>
+                                <p>We build robust, scalable solutions using the latest technologies and best practices in web development.</p>
+                            </div>
+                            
+                            <div class="process-step" style="text-align: center; position: relative;">
+                                <div class="step-number">05</div>
+                                <h3 style="margin: 1rem 0;">Launch</h3>
+                                <p>After thorough testing and optimization, we deploy your solution and ensure a smooth go-live process.</p>
+                            </div>
+                            
+                            <div class="process-step" style="text-align: center; position: relative;">
+                                <div class="step-number">06</div>
+                                <h3 style="margin: 1rem 0;">Support</h3>
+                                <p>We provide ongoing support and maintenance to ensure your solution continues to perform at its best.</p>
+                            </div>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Pricing Section -->
+                    <bridge-content-section layout="default" padding="large" animation="fade-up">
+                        <h2 class="section-title">Service Packages</h2>
+                        <p class="section-subtitle">Flexible pricing options to suit businesses of all sizes</p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 3rem auto 0;">
+                            <div class="pricing-card starter">
+                                <div class="pricing-header">
+                                    <h3>Starter</h3>
+                                    <div class="price">
+                                        <span class="currency">$</span>
+                                        <span class="amount">2,999</span>
+                                        <span class="period">/project</span>
+                                    </div>
+                                    <p>Perfect for small businesses and startups</p>
+                                </div>
+                                <div class="pricing-features">
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> 5-page website</li>
+                                        <li><i class="fas fa-check"></i> Responsive design</li>
+                                        <li><i class="fas fa-check"></i> Basic SEO setup</li>
+                                        <li><i class="fas fa-check"></i> Contact forms</li>
+                                        <li><i class="fas fa-check"></i> 30 days support</li>
+                                    </ul>
+                                </div>
+                                <bridge-button variant="outline" size="large">Get Started</bridge-button>
+                            </div>
+                            
+                            <div class="pricing-card professional featured">
+                                <div class="featured-badge">Most Popular</div>
+                                <div class="pricing-header">
+                                    <h3>Professional</h3>
+                                    <div class="price">
+                                        <span class="currency">$</span>
+                                        <span class="amount">7,999</span>
+                                        <span class="period">/project</span>
+                                    </div>
+                                    <p>Ideal for growing businesses</p>
+                                </div>
+                                <div class="pricing-features">
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> 10-page website</li>
+                                        <li><i class="fas fa-check"></i> Custom design</li>
+                                        <li><i class="fas fa-check"></i> Advanced SEO</li>
+                                        <li><i class="fas fa-check"></i> E-commerce integration</li>
+                                        <li><i class="fas fa-check"></i> 90 days support</li>
+                                        <li><i class="fas fa-check"></i> Analytics setup</li>
+                                    </ul>
+                                </div>
+                                <bridge-button variant="primary" size="large">Get Started</bridge-button>
+                            </div>
+                            
+                            <div class="pricing-card enterprise">
+                                <div class="pricing-header">
+                                    <h3>Enterprise</h3>
+                                    <div class="price">
+                                        <span class="currency">$</span>
+                                        <span class="amount">15,999</span>
+                                        <span class="period">/project</span>
+                                    </div>
+                                    <p>For large organizations with complex needs</p>
+                                </div>
+                                <div class="pricing-features">
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Unlimited pages</li>
+                                        <li><i class="fas fa-check"></i> Custom development</li>
+                                        <li><i class="fas fa-check"></i> Advanced integrations</li>
+                                        <li><i class="fas fa-check"></i> Priority support</li>
+                                        <li><i class="fas fa-check"></i> 1 year maintenance</li>
+                                        <li><i class="fas fa-check"></i> Training included</li>
+                                    </ul>
+                                </div>
+                                <bridge-button variant="outline" size="large">Contact Sales</bridge-button>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 3rem;">
+                            <p style="color: var(--bridge-text-light); margin-bottom: 1rem;">Need a custom solution? We'd love to hear about your project.</p>
+                            <bridge-button variant="primary">
+                                <a href="contact.html" style="color: inherit; text-decoration: none;">Get Custom Quote</a>
+                            </bridge-button>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- FAQ Section -->
+                    <bridge-content-section layout="centered" background="light" padding="large" animation="fade-up">
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                        <p class="section-subtitle">Get answers to common questions about our services</p>
+                        
+                        <div style="max-width: 800px; margin: 3rem auto 0;">
+                            <bridge-accordion allow-multiple>
+                                <bridge-accordion-item title="What is your typical project timeline?" open>
+                                    Project timelines vary depending on scope and complexity. A typical 5-page website takes 4-6 weeks, while larger projects can take 8-16 weeks. We'll provide a detailed timeline during the initial consultation.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="Do you provide ongoing maintenance and support?">
+                                    Yes, we offer comprehensive maintenance and support packages. This includes security updates, content updates, performance monitoring, and technical support. We believe in long-term partnerships with our clients.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="Can you work with my existing brand guidelines?">
+                                    Absolutely! We can work within your existing brand guidelines and help extend them to digital platforms. If you don't have established guidelines, we can help develop them as part of the project.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="What technologies do you use?">
+                                    We use modern web technologies including HTML5, CSS3, JavaScript, React, Node.js, and various CMS platforms. We select the best technology stack based on your specific requirements and goals.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="Do you offer hosting and domain services?">
+                                    While we don't provide hosting directly, we can recommend reliable hosting partners and help you set up your hosting environment. We also assist with domain registration and DNS configuration.
+                                </bridge-accordion-item>
+
+                                <bridge-accordion-item title="What makes your approach different?">
+                                    Our focus on modern web components, performance optimization, and accessibility sets us apart. We don't just build websites; we create digital experiences that are fast, accessible, and future-proof.
+                                </bridge-accordion-item>
+                            </bridge-accordion>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Call to Action Section -->
+                    <bridge-content-section layout="centered" padding="large" animation="fade-up">
+                        <h2 class="section-title">Ready to Start Your Project?</h2>
+                        <p class="section-subtitle">Let's discuss how we can help bring your vision to life</p>
+                        
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <bridge-button variant="primary" size="large">
+                                <a href="contact.html" style="color: inherit; text-decoration: none;">Get Started Today</a>
+                            </bridge-button>
+                            <bridge-button variant="outline" size="large">
+                                <a href="portfolio.html" style="color: inherit; text-decoration: none;">View Our Work</a>
+                            </bridge-button>
+                        </div>
+                    </bridge-content-section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <bridge-footer
+                columns="4"
+                copyright="© 2025 Bridge Theme. All rights reserved."
+                background="dark"
+            >
+                <div slot="column-1">
+                    <h4>Bridge Theme</h4>
+                    <p>Modern web components for building beautiful, accessible websites with native browser technologies.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div slot="column-2">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#web-design">Web Design</a></li>
+                        <li><a href="#development">Development</a></li>
+                        <li><a href="#mobile">Mobile Apps</a></li>
+                        <li><a href="#seo">SEO & Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-3">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-4">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </bridge-footer>
+
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <bridge-back-to-top></bridge-back-to-top>
+
+    <style>
+        .process-step {
+            opacity: 0;
+            animation: slideUp 0.8s ease-out forwards;
+        }
+
+        .process-step:nth-child(1) { animation-delay: 0.1s; }
+        .process-step:nth-child(2) { animation-delay: 0.2s; }
+        .process-step:nth-child(3) { animation-delay: 0.3s; }
+        .process-step:nth-child(4) { animation-delay: 0.4s; }
+        .process-step:nth-child(5) { animation-delay: 0.5s; }
+        .process-step:nth-child(6) { animation-delay: 0.6s; }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--bridge-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .pricing-card {
+            background: var(--bridge-bg-white);
+            border: 2px solid var(--bridge-border-light);
+            border-radius: 1rem;
+            padding: 2rem;
+            position: relative;
+            transition: var(--bridge-transition-base);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--bridge-shadow-xl);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--bridge-primary);
+            transform: scale(1.05);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bridge-primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .currency {
+            font-size: 1.5rem;
+            color: var(--bridge-text-light);
+        }
+
+        .amount {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--bridge-primary);
+        }
+
+        .period {
+            font-size: 1rem;
+            color: var(--bridge-text-light);
+        }
+
+        .pricing-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-features i {
+            color: var(--bridge-primary);
+            margin-right: 0.75rem;
+            width: 16px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🌉 Services page loaded!');
+        });
+    </script>
+</body>
+</html>

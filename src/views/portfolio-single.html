@@ -1,0 +1,553 @@
+<!-- Portfolio Single Template -->
+<!-- This template can be used for individual portfolio project pages -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{project.title}} - Bridge Theme Portfolio</title>
+    <meta name="description" content="{{project.description}}">
+    
+    <!-- Import Bridge Web Components -->
+    <script type="module" src="../main.js"></script>
+    
+    <!-- Bridge Theme Core Styles -->
+    <link rel="stylesheet" href="../shared/styles/bridge-core.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-layout.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-responsive.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-pages.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{project.title}}">
+    <meta property="og:description" content="{{project.description}}">
+    <meta property="og:image" content="{{project.featuredImage}}">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="bridge-theme portfolio-single">
+    <div class="wrapper">
+        <div class="wrapper_inner">
+            
+            <!-- Header -->
+            <bridge-header
+                logo="Bridge Theme"
+                variant="default"
+                sticky="true"
+                background="white"
+            >
+                <nav slot="menu">
+                    <bridge-menu>
+                        <bridge-menu-item href="../index.html">Home</bridge-menu-item>
+                        <bridge-menu-item href="../pages/about.html">About</bridge-menu-item>
+                        <bridge-menu-item href="../pages/services.html">Services</bridge-menu-item>
+                        <bridge-menu-item href="../pages/portfolio.html" active>Portfolio</bridge-menu-item>
+                        <bridge-menu-item href="../pages/blog.html">Blog</bridge-menu-item>
+                        <bridge-menu-item href="../pages/contact.html">Contact</bridge-menu-item>
+                    </bridge-menu>
+                </nav>
+            </bridge-header>
+
+            <!-- Main Content -->
+            <div class="content">
+                <div class="content_inner">
+                    
+                    <!-- Project Hero -->
+                    <bridge-hero-section
+                        variant="minimal"
+                        height="60vh"
+                        background="{{project.featuredImage}}"
+                        overlay="gradient-dark"
+                        alignment="center"
+                    >
+                        <div class="project-meta">
+                            <span class="project-category">{{project.category}}</span>
+                            <span class="project-year">{{project.year}}</span>
+                        </div>
+                        <h1>{{project.title}}</h1>
+                        <p>{{project.tagline}}</p>
+                        
+                        <div class="hero-actions">
+                            <bridge-button variant="primary" size="large">
+                                <a href="{{project.liveUrl}}" target="_blank" rel="noopener" class="button-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Live Site
+                                </a>
+                            </bridge-button>
+                            <bridge-button variant="outline-light" size="large">
+                                <a href="{{project.codeUrl}}" target="_blank" rel="noopener" class="button-link">
+                                    <i class="fab fa-github"></i>
+                                    View Code
+                                </a>
+                            </bridge-button>
+                        </div>
+                    </bridge-hero-section>
+
+                    <!-- Project Details -->
+                    <bridge-content-section layout="two-column" padding="large" animation="fade-up">
+                        <div>
+                            <h2>Project Overview</h2>
+                            <p class="lead">{{project.description}}</p>
+                            
+                            <div class="project-details">
+                                <h3>The Challenge</h3>
+                                <p>{{project.challenge}}</p>
+                                
+                                <h3>The Solution</h3>
+                                <p>{{project.solution}}</p>
+                                
+                                <h3>The Result</h3>
+                                <p>{{project.result}}</p>
+                            </div>
+                            
+                            <!-- Key Features -->
+                            <div class="key-features">
+                                <h3>Key Features</h3>
+                                <ul class="feature-list">
+                                    <li><i class="fas fa-check"></i> Responsive Web Design</li>
+                                    <li><i class="fas fa-check"></i> Modern JavaScript Framework</li>
+                                    <li><i class="fas fa-check"></i> Performance Optimization</li>
+                                    <li><i class="fas fa-check"></i> SEO Best Practices</li>
+                                    <li><i class="fas fa-check"></i> Accessibility Compliance</li>
+                                    <li><i class="fas fa-check"></i> Cross-browser Compatibility</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="project-info-sidebar">
+                            <div class="project-info-card">
+                                <h4>Project Details</h4>
+                                
+                                <div class="info-item">
+                                    <strong>Client:</strong>
+                                    <span>{{project.client}}</span>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <strong>Category:</strong>
+                                    <span>{{project.category}}</span>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <strong>Duration:</strong>
+                                    <span>{{project.duration}}</span>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <strong>Year:</strong>
+                                    <span>{{project.year}}</span>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <strong>Technologies:</strong>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">HTML5</span>
+                                        <span class="tech-tag">CSS3</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Node.js</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <strong>Services:</strong>
+                                    <ul class="services-list">
+                                        <li>UI/UX Design</li>
+                                        <li>Frontend Development</li>
+                                        <li>Backend Development</li>
+                                        <li>Quality Assurance</li>
+                                        <li>Deployment & Hosting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Project Stats -->
+                            <div class="project-stats-card">
+                                <h4>Project Impact</h4>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-number">+150%</div>
+                                    <div class="stat-label">User Engagement</div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-number">95</div>
+                                    <div class="stat-label">Performance Score</div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-number">2.3s</div>
+                                    <div class="stat-label">Load Time</div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-number">100%</div>
+                                    <div class="stat-label">Accessibility Score</div>
+                                </div>
+                            </div>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Project Gallery -->
+                    <bridge-content-section layout="default" background="light" padding="large" animation="fade-up">
+                        <h2 class="section-title">Project Gallery</h2>
+                        <p class="section-subtitle">A closer look at the design and development process</p>
+                        
+                        <div class="project-gallery">
+                            <!-- Desktop View -->
+                            <div class="gallery-section">
+                                <h3>Desktop Experience</h3>
+                                <div class="browser-mockup">
+                                    <div class="browser-header">
+                                        <div class="browser-controls">
+                                            <span class="control red"></span>
+                                            <span class="control yellow"></span>
+                                            <span class="control green"></span>
+                                        </div>
+                                        <div class="browser-url">{{project.liveUrl}}</div>
+                                    </div>
+                                    <bridge-image
+                                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                        alt="Desktop view of {{project.title}}"
+                                        width="100%"
+                                        height="600px"
+                                        lazy="true"
+                                        animation="fade-in"
+                                    ></bridge-image>
+                                </div>
+                            </div>
+                            
+                            <!-- Mobile Views -->
+                            <div class="gallery-section">
+                                <h3>Mobile Experience</h3>
+                                <div class="mobile-mockups">
+                                    <div class="phone-mockup">
+                                        <div class="phone-header">
+                                            <div class="phone-notch"></div>
+                                        </div>
+                                        <bridge-image
+                                            src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                            alt="Mobile view 1 of {{project.title}}"
+                                            width="100%"
+                                            height="500px"
+                                            lazy="true"
+                                            animation="fade-in"
+                                        ></bridge-image>
+                                    </div>
+                                    
+                                    <div class="phone-mockup">
+                                        <div class="phone-header">
+                                            <div class="phone-notch"></div>
+                                        </div>
+                                        <bridge-image
+                                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                            alt="Mobile view 2 of {{project.title}}"
+                                            width="100%"
+                                            height="500px"
+                                            lazy="true"
+                                            animation="fade-in"
+                                        ></bridge-image>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Additional Screenshots -->
+                            <div class="gallery-section">
+                                <h3>Additional Features</h3>
+                                <div class="screenshot-grid">
+                                    <bridge-image
+                                        src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                        alt="Feature screenshot 1"
+                                        width="100%"
+                                        height="300px"
+                                        border-radius="0.5rem"
+                                        lazy="true"
+                                        animation="fade-in"
+                                    ></bridge-image>
+                                    
+                                    <bridge-image
+                                        src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                        alt="Feature screenshot 2"
+                                        width="100%"
+                                        height="300px"
+                                        border-radius="0.5rem"
+                                        lazy="true"
+                                        animation="fade-in"
+                                    ></bridge-image>
+                                    
+                                    <bridge-image
+                                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                        alt="Feature screenshot 3"
+                                        width="100%"
+                                        height="300px"
+                                        border-radius="0.5rem"
+                                        lazy="true"
+                                        animation="fade-in"
+                                    ></bridge-image>
+                                    
+                                    <bridge-image
+                                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                        alt="Feature screenshot 4"
+                                        width="100%"
+                                        height="300px"
+                                        border-radius="0.5rem"
+                                        lazy="true"
+                                        animation="fade-in"
+                                    ></bridge-image>
+                                </div>
+                            </div>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Client Testimonial -->
+                    <bridge-content-section layout="centered" padding="large" animation="fade-up">
+                        <div class="client-testimonial">
+                            <blockquote>
+                                "Working with Bridge Theme was an exceptional experience. They delivered a website that not only looks amazing but performs incredibly well. Our conversion rates have increased by 40% since launch."
+                            </blockquote>
+                            
+                            <div class="testimonial-author">
+                                <bridge-image
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80"
+                                    alt="{{project.clientContact.name}}"
+                                    width="80px"
+                                    height="80px"
+                                    border-radius="50%"
+                                    lazy="true"
+                                ></bridge-image>
+                                
+                                <div class="author-info">
+                                    <div class="author-name">{{project.clientContact.name}}</div>
+                                    <div class="author-title">{{project.clientContact.title}}</div>
+                                    <div class="author-company">{{project.client}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Related Projects -->
+                    <bridge-content-section layout="default" background="light" padding="large" animation="fade-up">
+                        <h2 class="section-title">Related Projects</h2>
+                        <p class="section-subtitle">Explore more of our work</p>
+                        
+                        <div class="related-projects-grid">
+                            <div class="related-project-card">
+                                <bridge-image
+                                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                    alt="Related project"
+                                    width="100%"
+                                    height="250px"
+                                    border-radius="1rem 1rem 0 0"
+                                    lazy="true"
+                                ></bridge-image>
+                                
+                                <div class="project-card-content">
+                                    <div class="project-card-meta">
+                                        <span class="category">E-commerce</span>
+                                        <span class="year">2025</span>
+                                    </div>
+                                    <h3><a href="#">Fashion Store Platform</a></h3>
+                                    <p>Modern e-commerce platform with advanced filtering and seamless checkout experience.</p>
+                                    
+                                    <div class="project-card-footer">
+                                        <bridge-button variant="outline" size="small">View Project</bridge-button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="related-project-card">
+                                <bridge-image
+                                    src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                    alt="Related project"
+                                    width="100%"
+                                    height="250px"
+                                    border-radius="1rem 1rem 0 0"
+                                    lazy="true"
+                                ></bridge-image>
+                                
+                                <div class="project-card-content">
+                                    <div class="project-card-meta">
+                                        <span class="category">SaaS</span>
+                                        <span class="year">2024</span>
+                                    </div>
+                                    <h3><a href="#">Analytics Dashboard</a></h3>
+                                    <p>Real-time data visualization platform for business intelligence and analytics.</p>
+                                    
+                                    <div class="project-card-footer">
+                                        <bridge-button variant="outline" size="small">View Project</bridge-button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="related-project-card">
+                                <bridge-image
+                                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                    alt="Related project"
+                                    width="100%"
+                                    height="250px"
+                                    border-radius="1rem 1rem 0 0"
+                                    lazy="true"
+                                ></bridge-image>
+                                
+                                <div class="project-card-content">
+                                    <div class="project-card-meta">
+                                        <span class="category">Healthcare</span>
+                                        <span class="year">2024</span>
+                                    </div>
+                                    <h3><a href="#">Medical Portal</a></h3>
+                                    <p>Comprehensive patient management system with telemedicine capabilities.</p>
+                                    
+                                    <div class="project-card-footer">
+                                        <bridge-button variant="outline" size="small">View Project</bridge-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Call to Action -->
+                    <bridge-content-section layout="centered" padding="large" animation="fade-up">
+                        <h2 class="section-title">Interested in Working Together?</h2>
+                        <p class="section-subtitle">Let's discuss your project and how we can bring your vision to life</p>
+                        
+                        <div class="cta-actions">
+                            <bridge-button variant="primary" size="large">
+                                <a href="../pages/contact.html" class="button-link">Start Your Project</a>
+                            </bridge-button>
+                            <bridge-button variant="outline" size="large">
+                                <a href="../pages/portfolio.html" class="button-link">View All Projects</a>
+                            </bridge-button>
+                        </div>
+                    </bridge-content-section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <bridge-footer
+                columns="4"
+                copyright="© 2025 Bridge Theme. All rights reserved."
+                background="dark"
+            >
+                <div slot="column-1">
+                    <h4>Bridge Theme</h4>
+                    <p>Modern web components for building beautiful, accessible websites with native browser technologies.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div slot="column-2">
+                    <h4>Portfolio</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">E-commerce</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-3">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../pages/services.html">All Services</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-4">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="../pages/contact.html">Get in Touch</a></li>
+                        <li><a href="#">Request Quote</a></li>
+                        <li><a href="#">Schedule Call</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </bridge-footer>
+
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <bridge-back-to-top></bridge-back-to-top>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add lightbox functionality for gallery images
+            document.querySelectorAll('.project-gallery bridge-image').forEach(img => {
+                img.addEventListener('click', function() {
+                    // Simple lightbox implementation
+                    const src = this.getAttribute('src');
+                    const lightbox = document.createElement('div');
+                    lightbox.className = 'lightbox';
+                    lightbox.innerHTML = `
+                        <div class="lightbox-overlay" onclick="this.parentElement.remove()">
+                            <img src="${src}" alt="Lightbox image" onclick="event.stopPropagation()">
+                            <button class="lightbox-close" onclick="this.parentElement.parentElement.remove()">×</button>
+                        </div>
+                    `;
+                    
+                    // Add lightbox styles
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        .lightbox {
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            z-index: 10000;
+                        }
+                        .lightbox-overlay {
+                            background: rgba(0,0,0,0.9);
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                        }
+                        .lightbox img {
+                            max-width: 90%;
+                            max-height: 90%;
+                            object-fit: contain;
+                            cursor: default;
+                        }
+                        .lightbox-close {
+                            position: absolute;
+                            top: 2rem;
+                            right: 2rem;
+                            background: none;
+                            border: none;
+                            color: white;
+                            font-size: 3rem;
+                            cursor: pointer;
+                            z-index: 10001;
+                        }
+                    `;
+                    
+                    document.head.appendChild(style);
+                    document.body.appendChild(lightbox);
+                });
+            });
+
+            console.log('🌉 Portfolio single template loaded!');
+        });
+    </script>
+</body>
+</html>

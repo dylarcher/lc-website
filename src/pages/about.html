@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Bridge Theme</title>
+    <meta name="description" content="Learn about our story, mission, and the team behind Bridge Theme">
+    
+    <!-- Import Bridge Web Components -->
+    <script type="module" src="../main.js"></script>
+    
+    <!-- Bridge Theme Core Styles -->
+    <link rel="stylesheet" href="../shared/styles/bridge-core.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-layout.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-responsive.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-pages.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bridge-theme">
+    <!-- Skip Links -->
+    <bridge-skip-links auto-detect position="top-left">
+        <bridge-skip-link href="#main-content" label="Skip to main content"></bridge-skip-link>
+        <bridge-skip-link href="#navigation" label="Skip to navigation"></bridge-skip-link>
+        <bridge-skip-link href="#about-section" label="Skip to about section"></bridge-skip-link>
+        <bridge-skip-link href="#team-section" label="Skip to team section"></bridge-skip-link>
+        <bridge-skip-link href="#footer" label="Skip to footer"></bridge-skip-link>
+    </bridge-skip-links>
+
+    <div class="wrapper">
+        <div class="wrapper_inner">
+            
+            <!-- Header -->
+            <bridge-header
+                logo="Bridge Theme"
+                variant="default"
+                sticky="true"
+                background="white"
+                role="banner"
+                aria-label="Site header"
+            >
+                <nav slot="menu" id="navigation" role="navigation" aria-label="Main navigation">
+                    <bridge-menu>
+                        <bridge-menu-item href="../index.html">Home</bridge-menu-item>
+                        <bridge-menu-item href="about.html" active>About</bridge-menu-item>
+                        <bridge-menu-item href="services.html">Services</bridge-menu-item>
+                        <bridge-menu-item href="portfolio.html">Portfolio</bridge-menu-item>
+                        <bridge-menu-item href="blog.html">Blog</bridge-menu-item>
+                        <bridge-menu-item href="contact.html">Contact</bridge-menu-item>
+                    </bridge-menu>
+                </nav>
+            </bridge-header>
+
+            <!-- Main Content -->
+            <main class="content" id="main-content" role="main" aria-label="About page content">
+                <div class="content_inner">
+                    
+                    <!-- Page Title Section -->
+                    <bridge-hero-section
+                        variant="minimal"
+                        height="50vh"
+                        background="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
+                        overlay="dark"
+                        alignment="center"
+                    >
+                        <h1>About Bridge Theme</h1>
+                        <p>Discover our story, mission, and the passionate team behind the modern web components revolution</p>
+                    </bridge-hero-section>
+
+                    <!-- Company Story Section -->
+                    <bridge-content-section id="about-section" layout="two-column" padding="large" animation="fade-up" role="region" aria-labelledby="story-heading">
+                        <div>
+                            <h2 id="story-heading">Our Story</h2>
+                            <p class="lead">Bridge Theme was born from a vision to modernize web development while maintaining the creative flexibility that made the original theme so popular.</p>
+                            <p>Founded in 2024, our mission has been to bridge the gap between traditional web development and modern browser technologies. We believe that web components represent the future of the internet, providing native browser support, framework independence, and unparalleled performance.</p>
+                            <p>What started as a simple conversion project has evolved into a comprehensive design system that empowers developers and designers to create stunning, accessible, and performant websites without compromising on creativity or functionality.</p>
+                            
+                            <ul class="feature-list" style="margin-top: 2rem;" role="list" aria-label="Key features">
+                                <li class="feature-item">
+                                    <i class="fas fa-rocket" aria-hidden="true"></i>
+                                    <span>Performance-first approach</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-universal-access" aria-hidden="true"></i>
+                                    <span>Accessibility built-in</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-code" aria-hidden="true"></i>
+                                    <span>Framework agnostic</span>
+                                </li>
+                                <li class="feature-item">
+                                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                                    <span>Mobile-first design</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <bridge-image
+                                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                alt="Team collaboration"
+                                lazy="true"
+                                animation="fade-in"
+                                border-radius="1rem"
+                            ></bridge-image>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Mission & Values Section -->
+                    <bridge-content-section layout="centered" background="light" padding="large" animation="fade-up">
+                        <h2 class="section-title">Our Mission & Values</h2>
+                        <p class="section-subtitle">The principles that guide everything we do</p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 4rem;">
+                            <bridge-service-card
+                                icon="fas fa-lightbulb"
+                                title="Innovation"
+                                variant="minimal"
+                                hover-effect="lift"
+                            >
+                                We constantly push the boundaries of what's possible with web technologies, always staying ahead of the curve.
+                            </bridge-service-card>
+                            
+                            <bridge-service-card
+                                icon="fas fa-users"
+                                title="Community"
+                                variant="minimal"
+                                hover-effect="lift"
+                            >
+                                Our success is built on the foundation of an engaged, supportive community of developers and designers.
+                            </bridge-service-card>
+                            
+                            <bridge-service-card
+                                icon="fas fa-heart"
+                                title="Quality"
+                                variant="minimal"
+                                hover-effect="lift"
+                            >
+                                Every component, every line of code is crafted with attention to detail and commitment to excellence.
+                            </bridge-service-card>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Team Section -->
+                    <bridge-content-section id="team-section" layout="default" padding="large" animation="fade-up" role="region" aria-labelledby="team-heading">
+                        <h2 id="team-heading" class="section-title">Meet Our Team</h2>
+                        <p class="section-subtitle">The talented individuals making Bridge Theme possible</p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;" role="list" aria-label="Team members">
+                            <article class="team-member" role="listitem">
+                                <bridge-image
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
+                                    alt="John Smith"
+                                    width="100%"
+                                    height="300px"
+                                    border-radius="1rem"
+                                    lazy="true"
+                                ></bridge-image>
+                                <h3 style="margin: 1.5rem 0 0.5rem; text-align: center;">John Smith</h3>
+                                <p style="color: var(--bridge-primary); text-align: center; margin-bottom: 1rem;">Lead Developer</p>
+                                <p style="text-align: center; color: var(--bridge-text-light);">Passionate about modern web standards and performance optimization. John leads our technical vision and architecture decisions.</p>
+                                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+                                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="team-member">
+                                <bridge-image
+                                    src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
+                                    alt="Sarah Johnson"
+                                    width="100%"
+                                    height="300px"
+                                    border-radius="1rem"
+                                    lazy="true"
+                                ></bridge-image>
+                                <h3 style="margin: 1.5rem 0 0.5rem; text-align: center;">Sarah Johnson</h3>
+                                <p style="color: var(--bridge-primary); text-align: center; margin-bottom: 1rem;">UX/UI Designer</p>
+                                <p style="text-align: center; color: var(--bridge-text-light);">Creative force behind Bridge Theme's beautiful and intuitive user interfaces. Sarah ensures every component is both beautiful and functional.</p>
+                                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+                                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="team-member">
+                                <bridge-image
+                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300&q=80"
+                                    alt="Mike Chen"
+                                    width="100%"
+                                    height="300px"
+                                    border-radius="1rem"
+                                    lazy="true"
+                                ></bridge-image>
+                                <h3 style="margin: 1.5rem 0 0.5rem; text-align: center;">Mike Chen</h3>
+                                <p style="color: var(--bridge-primary); text-align: center; margin-bottom: 1rem;">Frontend Engineer</p>
+                                <p style="text-align: center; color: var(--bridge-text-light);">Expert in accessibility and performance optimization. Mike ensures our components work flawlessly across all devices and browsers.</p>
+                                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
+                                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Statistics Section -->
+                    <bridge-content-section layout="default" background="primary" padding="large" animation="fade-up">
+                        <div style="color: white; text-align: center;">
+                            <h2 style="color: white; margin-bottom: 3rem;">Bridge Theme by the Numbers</h2>
+                            
+                            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem;">
+                                <div class="stat-item">
+                                    <div style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">50+</div>
+                                    <div style="font-size: 1.125rem; opacity: 0.9;">Web Components</div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">10K+</div>
+                                    <div style="font-size: 1.125rem; opacity: 0.9;">Happy Users</div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">99.9%</div>
+                                    <div style="font-size: 1.125rem; opacity: 0.9;">Uptime</div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">24/7</div>
+                                    <div style="font-size: 1.125rem; opacity: 0.9;">Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </bridge-content-section>
+
+                    <!-- Call to Action Section -->
+                    <bridge-content-section layout="centered" padding="large" animation="fade-up">
+                        <h2 class="section-title">Ready to Get Started?</h2>
+                        <p class="section-subtitle">Join thousands of developers and designers who trust Bridge Theme for their projects</p>
+                        
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <bridge-keyboard-shortcut keys="ctrl+shift+c" action="click" description="Contact us" show-visual trigger-mode="hover" position="bottom-center">
+                                <bridge-button variant="primary" size="large" aria-label="Contact us (Ctrl+Shift+C)">
+                                    <a href="contact.html" style="color: inherit; text-decoration: none;">Contact Us</a>
+                                </bridge-button>
+                            </bridge-keyboard-shortcut>
+                            
+                            <bridge-keyboard-shortcut keys="ctrl+shift+w" action="click" description="View our work" show-visual trigger-mode="hover" position="bottom-center">
+                                <bridge-button variant="outline" size="large" aria-label="View our work (Ctrl+Shift+W)">
+                                    <a href="portfolio.html" style="color: inherit; text-decoration: none;">View Our Work</a>
+                                </bridge-button>
+                            </bridge-keyboard-shortcut>
+                        </div>
+                    </bridge-content-section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <bridge-footer
+                id="footer"
+                columns="4"
+                copyright="© 2025 Bridge Theme. All rights reserved."
+                background="dark"
+                role="contentinfo"
+                aria-label="Site footer"
+            >
+                <div slot="column-1">
+                    <h4>Bridge Theme</h4>
+                    <p>Modern web components for building beautiful, accessible websites with native browser technologies.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div slot="column-2">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-3">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#changelog">Changelog</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-4">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press Kit</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </bridge-footer>
+
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <bridge-back-to-top></bridge-back-to-top>
+
+    <!-- Custom Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize animations for team members
+            const teamMembers = document.querySelectorAll('.team-member');
+            teamMembers.forEach((member, index) => {
+                member.style.animationDelay = `${index * 0.1}s`;
+                member.classList.add('fade-in');
+            });
+
+            console.log('🌉 About page loaded!');
+        });
+    </script>
+
+    <style>
+        .team-member {
+            background: var(--bridge-bg-white);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--bridge-shadow-md);
+            transition: var(--bridge-transition-base);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--bridge-shadow-xl);
+        }
+
+        .stat-item {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+
+        .stat-item:nth-child(1) { animation-delay: 0.1s; }
+        .stat-item:nth-child(2) { animation-delay: 0.2s; }
+        .stat-item:nth-child(3) { animation-delay: 0.3s; }
+        .stat-item:nth-child(4) { animation-delay: 0.4s; }
+    </style>
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Bridge Theme</title>
+    <meta name="description" content="Explore our creative portfolio of web design, development, and digital innovation projects">
+    
+    <!-- Import Bridge Web Components -->
+    <script type="module" src="../main.js"></script>
+    
+    <!-- Bridge Theme Core Styles -->
+    <link rel="stylesheet" href="../shared/styles/bridge-core.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-layout.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-responsive.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-pages.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Portfolio - Bridge Theme">
+    <meta property="og:description" content="Explore our creative portfolio of web design, development, and digital innovation projects">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="bridge-theme portfolio-page">
+    <div class="wrapper">
+        <div class="wrapper_inner">
+            
+            <!-- Header -->
+            <bridge-header
+                logo="Bridge Theme"
+                variant="default"
+                sticky="true"
+                background="white"
+            >
+                <nav slot="menu">
+                    <bridge-menu>
+                        <bridge-menu-item href="../index.html">Home</bridge-menu-item>
+                        <bridge-menu-item href="about.html">About</bridge-menu-item>
+                        <bridge-menu-item href="services.html">Services</bridge-menu-item>
+                        <bridge-menu-item href="portfolio.html" active>Portfolio</bridge-menu-item>
+                        <bridge-menu-item href="blog.html">Blog</bridge-menu-item>
+                        <bridge-menu-item href="components.html">Components</bridge-menu-item>
+                        <bridge-menu-item href="contact.html">Contact</bridge-menu-item>
+                    </bridge-menu>
+                </nav>
+            </bridge-header>
+
+            <!-- Main Content -->
+            <div class="content">
+                <div class="content_inner">
+                    
+                    <!-- Portfolio Hero -->
+                    <div class="portfolio-hero">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1 class="hero-title">Creative Portfolio</h1>
+                                <p class="hero-subtitle">Transforming ideas into digital experiences through innovative design and development</p>
+                                <div class="hero-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">250+</span>
+                                        <span class="stat-label">Projects</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">180+</span>
+                                        <span class="stat-label">Clients</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">8+</span>
+                                        <span class="stat-label">Years</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-visual">
+                                <div class="floating-cards">
+                                    <div class="floating-card card-1">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Project preview">
+                                    </div>
+                                    <div class="floating-card card-2">
+                                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Project preview">
+                                    </div>
+                                    <div class="floating-card card-3">
+                                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Project preview">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Navigation -->
+                    <div class="portfolio-nav-section">
+                        <div class="container">
+                            <div class="nav-controls">
+                                <div class="filter-tabs">
+                                    <button class="filter-tab active" data-filter="all">
+                                        <span>All Work</span>
+                                        <span class="count">24</span>
+                                    </button>
+                                    <button class="filter-tab" data-filter="web-design">
+                                        <span>Web Design</span>
+                                        <span class="count">8</span>
+                                    </button>
+                                    <button class="filter-tab" data-filter="development">
+                                        <span>Development</span>
+                                        <span class="count">10</span>
+                                    </button>
+                                    <button class="filter-tab" data-filter="branding">
+                                        <span>Branding</span>
+                                        <span class="count">4</span>
+                                    </button>
+                                    <button class="filter-tab" data-filter="mobile">
+                                        <span>Mobile</span>
+                                        <span class="count">2</span>
+                                    </button>
+                                </div>
+                                <div class="view-controls">
+                                    <button class="view-btn active" data-view="grid" title="Grid View">
+                                        <i class="fas fa-th"></i>
+                                    </button>
+                                    <button class="view-btn" data-view="list" title="List View">
+                                        <i class="fas fa-list"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Grid -->
+                    <div class="portfolio-section">
+                        <div class="container">
+                            <div class="portfolio-grid" id="portfolioGrid">
+                                
+                                <!-- Featured Project - Full Width -->
+                                <article class="portfolio-item featured" data-category="development">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform" loading="lazy">
+                                        <div class="project-overlay">
+                                            <div class="project-info">
+                                                <div class="project-category">Featured Project</div>
+                                                <h3 class="project-title">NextGen E-commerce Platform</h3>
+                                                <p class="project-description">Complete e-commerce solution with advanced features, real-time analytics, and seamless user experience. Built with modern technologies and optimized for performance.</p>
+                                                <div class="project-tech">
+                                                    <span class="tech-tag">React</span>
+                                                    <span class="tech-tag">Node.js</span>
+                                                    <span class="tech-tag">MongoDB</span>
+                                                    <span class="tech-tag">AWS</span>
+                                                </div>
+                                                <div class="project-actions">
+                                                    <a href="../views/portfolio-single.html" class="btn-primary">
+                                                        <i class="fas fa-eye"></i> View Project
+                                                    </a>
+                                                    <a href="#" class="btn-secondary">
+                                                        <i class="fas fa-external-link-alt"></i> Live Demo
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <!-- Regular Projects -->
+                                <article class="portfolio-item" data-category="web-design">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Banking App UI" loading="lazy">
+                                        <div class="project-overlay">
+                                            <div class="project-badge">
+                                                <i class="fas fa-award"></i> Award Winner
+                                            </div>
+                                            <div class="project-actions">
+                                                <a href="../views/portfolio-single.html" class="action-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-meta">
+                                            <span class="category">UI/UX Design</span>
+                                            <span class="date">2024</span>
+                                        </div>
+                                        <h3 class="project-title">Banking App Interface</h3>
+                                        <p class="project-summary">Modern mobile banking interface with intuitive design and enhanced security features.</p>
+                                        <div class="project-footer">
+                                            <div class="project-client">
+                                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80" alt="Client" class="client-avatar">
+                                                <span>FinanceCorpe</span>
+                                            </div>
+                                            <div class="project-likes">
+                                                <i class="fas fa-heart"></i> 127
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="portfolio-item" data-category="development">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Analytics Dashboard" loading="lazy">
+                                        <div class="project-overlay">
+                                            <div class="project-actions">
+                                                <a href="../views/portfolio-single.html" class="action-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-meta">
+                                            <span class="category">Data Visualization</span>
+                                            <span class="date">2024</span>
+                                        </div>
+                                        <h3 class="project-title">Analytics Dashboard</h3>
+                                        <p class="project-summary">Real-time business intelligence dashboard with interactive data visualization.</p>
+                                        <div class="project-footer">
+                                            <div class="project-client">
+                                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80" alt="Client" class="client-avatar">
+                                                <span>DataTech Inc</span>
+                                            </div>
+                                            <div class="project-likes">
+                                                <i class="fas fa-heart"></i> 94
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="portfolio-item" data-category="branding">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Brand Identity" loading="lazy">
+                                        <div class="project-overlay">
+                                            <div class="project-actions">
+                                                <a href="../views/portfolio-single.html" class="action-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-meta">
+                                            <span class="category">Brand Design</span>
+                                            <span class="date">2024</span>
+                                        </div>
+                                        <h3 class="project-title">Creative Studio Identity</h3>
+                                        <p class="project-summary">Complete visual identity system with modern branding elements and guidelines.</p>
+                                        <div class="project-footer">
+                                            <div class="project-client">
+                                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80" alt="Client" class="client-avatar">
+                                                <span>Creative Co.</span>
+                                            </div>
+                                            <div class="project-likes">
+                                                <i class="fas fa-heart"></i> 203
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="portfolio-item" data-category="development">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Healthcare Platform" loading="lazy">
+                                        <div class="project-overlay">
+                                            <div class="project-actions">
+                                                <a href="../views/portfolio-single.html" class="action-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-meta">
+                                            <span class="category">Healthcare Tech</span>
+                                            <span class="date">2024</span>
+                                        </div>
+                                        <h3 class="project-title">Medical Management System</h3>
+                                        <p class="project-summary">Comprehensive patient management platform with telemedicine capabilities.</p>
+                                        <div class="project-footer">
+                                            <div class="project-client">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80" alt="Client" class="client-avatar">
+                                                <span>HealthCare+</span>
+                                            </div>
+                                            <div class="project-likes">
+                                                <i class="fas fa-heart"></i> 156
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="portfolio-item" data-category="web-design">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="SaaS Platform" loading="lazy">
+                                        <div class="project-overlay">
+                                            <div class="project-actions">
+                                                <a href="../views/portfolio-single.html" class="action-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-meta">
+                                            <span class="category">SaaS Product</span>
+                                            <span class="date">2024</span>
+                                        </div>
+                                        <h3 class="project-title">Cloud Business Suite</h3>
+                                        <p class="project-summary">Modern SaaS platform interface with clean design and user-friendly experience.</p>
+                                        <div class="project-footer">
+                                            <div class="project-client">
+                                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80" alt="Client" class="client-avatar">
+                                                <span>CloudTech</span>
+                                            </div>
+                                            <div class="project-likes">
+                                                <i class="fas fa-heart"></i> 89
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="portfolio-item" data-category="mobile">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Fitness App" loading="lazy">
+                                        <div class="project-overlay">
+                                            <div class="project-badge">
+                                                <i class="fas fa-mobile-alt"></i> Mobile App
+                                            </div>
+                                            <div class="project-actions">
+                                                <a href="../views/portfolio-single.html" class="action-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-meta">
+                                            <span class="category">Mobile Design</span>
+                                            <span class="date">2024</span>
+                                        </div>
+                                        <h3 class="project-title">FitLife Mobile App</h3>
+                                        <p class="project-summary">Comprehensive fitness tracking app with social features and workout plans.</p>
+                                        <div class="project-footer">
+                                            <div class="project-client">
+                                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80" alt="Client" class="client-avatar">
+                                                <span>FitTech</span>
+                                            </div>
+                                            <div class="project-likes">
+                                                <i class="fas fa-heart"></i> 312
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="portfolio-item" data-category="branding">
+                                    <div class="project-image">
+                                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="EdTech Brand" loading="lazy">
+                                        <div class="project-overlay">
+                                            <div class="project-actions">
+                                                <a href="../views/portfolio-single.html" class="action-btn">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                                <a href="#" class="action-btn">
+                                                    <i class="fas fa-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-content">
+                                        <div class="project-meta">
+                                            <span class="category">Education Tech</span>
+                                            <span class="date">2024</span>
+                                        </div>
+                                        <h3 class="project-title">EduTech Brand Identity</h3>
+                                        <p class="project-summary">Modern educational technology brand with vibrant identity and marketing materials.</p>
+                                        <div class="project-footer">
+                                            <div class="project-client">
+                                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80" alt="Client" class="client-avatar">
+                                                <span>EduPlatform</span>
+                                            </div>
+                                            <div class="project-likes">
+                                                <i class="fas fa-heart"></i> 178
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+                            
+                            <!-- Load More Section -->
+                            <div class="load-more-section">
+                                <button class="load-more-btn" id="loadMoreBtn">
+                                    <span class="btn-text">Load More Projects</span>
+                                    <i class="fas fa-arrow-down"></i>
+                                </button>
+                                <div class="projects-counter">
+                                    Showing <span id="currentCount">8</span> of <span id="totalCount">24</span> projects
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Section -->
+                    <div class="testimonial-section">
+                        <div class="container">
+                            <div class="testimonial-content">
+                                <div class="testimonial-text">
+                                    <blockquote>
+                                        "Working with Bridge Theme has been transformative for our business. Their innovative approach and attention to detail resulted in a 300% increase in user engagement."
+                                    </blockquote>
+                                    <div class="testimonial-author">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80&q=80" alt="Sarah Johnson" class="author-avatar">
+                                        <div class="author-info">
+                                            <div class="author-name">Sarah Johnson</div>
+                                            <div class="author-title">CEO, TechStart Inc.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-rocket"></i>
+                                        </div>
+                                        <div class="stat-value">300%</div>
+                                        <div class="stat-label">Increase in Engagement</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div class="stat-value">50%</div>
+                                        <div class="stat-label">Faster Load Times</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                        <div class="stat-value">2.5M+</div>
+                                        <div class="stat-label">Monthly Users</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Section -->
+                    <div class="cta-section">
+                        <div class="container">
+                            <div class="cta-content">
+                                <h2 class="cta-title">Ready to Start Your Next Project?</h2>
+                                <p class="cta-description">Let's collaborate and create something amazing together. From concept to launch, we'll be with you every step of the way.</p>
+                                <div class="cta-actions">
+                                    <a href="contact.html" class="btn-primary large">
+                                        <i class="fas fa-rocket"></i>
+                                        Start Your Project
+                                    </a>
+                                    <a href="services.html" class="btn-outline large">
+                                        <i class="fas fa-list"></i>
+                                        View Services
+                                    </a>
+                                </div>
+                                <div class="cta-note">
+                                    <i class="fas fa-calendar"></i>
+                                    Free consultation available - Book your call today
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <bridge-footer
+                columns="4"
+                copyright="© 2025 Bridge Theme. All rights reserved."
+                background="dark"
+            >
+                <div slot="column-1">
+                    <h4>Bridge Theme</h4>
+                    <p>Creating exceptional digital experiences through innovative design and cutting-edge development.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div slot="column-2">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">Branding</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-3">
+                    <h4>Portfolio</h4>
+                    <ul>
+                        <li><a href="portfolio.html">All Projects</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Client Reviews</a></li>
+                        <li><a href="#">Awards</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-4">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="#">Request Quote</a></li>
+                        <li><a href="#">Schedule Call</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+            </bridge-footer>
+
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <bridge-back-to-top></bridge-back-to-top>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Portfolio functionality
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const viewBtns = document.querySelectorAll('.view-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            const portfolioGrid = document.getElementById('portfolioGrid');
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const currentCount = document.getElementById('currentCount');
+            
+            let visibleItems = 8;
+            let currentFilter = 'all';
+            
+            // Filter functionality
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Update active tab
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    currentFilter = this.dataset.filter;
+                    filterProjects();
+                });
+            });
+            
+            // View toggle functionality
+            viewBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    viewBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const view = this.dataset.view;
+                    portfolioGrid.classList.toggle('list-view', view === 'list');
+                });
+            });
+            
+            // Filter projects function
+            function filterProjects() {
+                let visibleCount = 0;
+                
+                portfolioItems.forEach((item, index) => {
+                    const category = item.dataset.category;
+                    const shouldShow = currentFilter === 'all' || category === currentFilter;
+                    
+                    if (shouldShow && visibleCount < visibleItems) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, index * 100);
+                        visibleCount++;
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+                
+                currentCount.textContent = visibleCount;
+                loadMoreBtn.style.display = visibleCount < getFilteredItemsCount() ? 'block' : 'none';
+            }
+            
+            // Get filtered items count
+            function getFilteredItemsCount() {
+                if (currentFilter === 'all') return portfolioItems.length;
+                return Array.from(portfolioItems).filter(item => item.dataset.category === currentFilter).length;
+            }
+            
+            // Load more functionality
+            loadMoreBtn.addEventListener('click', function() {
+                visibleItems += 4;
+                filterProjects();
+                
+                // Animate button
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+            
+            // Like functionality
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('.action-btn') && e.target.closest('.action-btn').innerHTML.includes('fa-heart')) {
+                    e.preventDefault();
+                    const btn = e.target.closest('.action-btn');
+                    const heart = btn.querySelector('i');
+                    
+                    heart.classList.toggle('fas');
+                    heart.classList.toggle('far');
+                    btn.classList.toggle('liked');
+                    
+                    // Update likes count
+                    const likesElement = btn.closest('.portfolio-item').querySelector('.project-likes');
+                    if (likesElement) {
+                        const currentLikes = parseInt(likesElement.textContent.match(/\d+/)[0]);
+                        const newLikes = heart.classList.contains('fas') ? currentLikes + 1 : currentLikes - 1;
+                        likesElement.innerHTML = `<i class="fas fa-heart"></i> ${newLikes}`;
+                    }
+                }
+            });
+            
+            // Initialize
+            filterProjects();
+            
+            // Floating cards animation
+            const floatingCards = document.querySelectorAll('.floating-card');
+            floatingCards.forEach((card, index) => {
+                // Add slight delay and random movement
+                setInterval(() => {
+                    const x = Math.sin(Date.now() / 1000 + index) * 10;
+                    const y = Math.cos(Date.now() / 1500 + index) * 10;
+                    card.style.transform = `translate(${x}px, ${y}px) rotate(${Math.sin(Date.now() / 2000) * 5}deg)`;
+                }, 50);
+            });
+            
+            console.log('🎨 New Portfolio page loaded!');
+        });
+    </script>
+</body>
+</html>

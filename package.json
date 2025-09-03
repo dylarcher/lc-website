@@ -1,0 +1,113 @@
+{
+  "name": "legacy-concierge",
+  "version": "2.0.0",
+  "description": "Legacy Concierge - Modern Web Component Library and Premium Healthcare Website. Premium home healthcare and nursing services in Los Angeles featuring a custom web component system.",
+  "main": "index.js",
+  "homepage": "https://legacyconcierge.com",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "backup": "echo \"Run backup procedures - see docs/MAINTENANCE.md\"",
+    "security:check": "echo \"Review security checklist - see docs/SECURITY.md\""
+  },
+  "keywords": [
+    "wordpress",
+    "healthcare",
+    "concierge-nursing",
+    "home-care",
+    "medical-services",
+    "los-angeles",
+    "legacy-concierge-theme",
+    "web-components",
+    "qode",
+    "private-duty-nursing",
+    "caregiver-services",
+    "post-operative-care",
+    "oncology-care",
+    "dementia-care",
+    "iv-therapy",
+    "pain-management"
+  ],
+  "author": "Legacy Concierge Team",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylarcher/legacy-concierge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dylarcher/legacy-concierge/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "legacyConcierge": {
+    "website": {
+      "domain": "legacyconcierge.com",
+      "platform": "WordPress",
+      "theme": "Legacy Concierge Custom Web Components",
+      "status": "Production - Critical Issues Identified"
+    },
+    "services": {
+      "primary": [
+        "Concierge Nursing",
+        "Caregiver Services"
+      ],
+      "specializations": [
+        "Post-operative Recovery",
+        "Mental Health Support",
+        "Rehabilitation & Addiction Recovery",
+        "Oncology Care",
+        "IV Therapy",
+        "Heart Disease Management",
+        "Hospital-to-Home Transition",
+        "Dementia Care",
+        "Neurological & Cognitive Support",
+        "Pain & Symptom Management",
+        "Respiratory & Tracheostomy Care",
+        "Diabetes & Endocrine Disease Management"
+      ],
+      "conditions": [
+        "ALS",
+        "Alzheimer's",
+        "Dementia",
+        "Diabetes Management",
+        "Heart Disease",
+        "MS",
+        "Oncology Care",
+        "Ostomy Management",
+        "Parkinson's",
+        "Stroke Recovery",
+        "Traumatic Brain Injury (TBI)"
+      ]
+    },
+    "location": {
+      "primary": "Los Angeles, California",
+      "serviceArea": "Southern California"
+    },
+    "partnerships": [
+      "Brightside Referrals",
+      "Sollice Health",
+      "Prenuvo",
+      "Sleep Doc LA",
+      "Appian",
+      "WellWorth",
+      "Mindfull"
+    ],
+    "qualityStandards": {
+      "nurseAcceptanceRate": "3%",
+      "clientSatisfaction": "Premier healthcare standards",
+      "oversight": "Multi-level clinical oversight",
+      "availability": "24/7 support"
+    }
+  }
+}

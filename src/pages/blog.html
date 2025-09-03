@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Bridge Theme</title>
+    <meta name="description" content="Latest insights, tutorials, and updates from Bridge Theme">
+    
+    <!-- Import Bridge Web Components -->
+    <script type="module" src="../main.js"></script>
+    
+    <!-- Bridge Theme Core Styles -->
+    <link rel="stylesheet" href="../shared/styles/bridge-core.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-layout.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-responsive.css">
+    <link rel="stylesheet" href="../shared/styles/bridge-pages.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bridge-theme">
+    <div class="wrapper">
+        <div class="wrapper_inner">
+            
+            <!-- Header -->
+            <bridge-header
+                logo="Bridge Theme"
+                variant="default"
+                sticky="true"
+                background="white"
+            >
+                <nav slot="menu">
+                    <bridge-menu>
+                        <bridge-menu-item href="../index.html">Home</bridge-menu-item>
+                        <bridge-menu-item href="about.html">About</bridge-menu-item>
+                        <bridge-menu-item href="services.html">Services</bridge-menu-item>
+                        <bridge-menu-item href="portfolio.html">Portfolio</bridge-menu-item>
+                        <bridge-menu-item href="blog.html" active>Blog</bridge-menu-item>
+                        <bridge-menu-item href="contact.html">Contact</bridge-menu-item>
+                    </bridge-menu>
+                </nav>
+            </bridge-header>
+
+            <!-- Main Content -->
+            <div class="content">
+                <div class="content_inner">
+                    
+                    <!-- Page Title Section -->
+                    <bridge-hero-section
+                        variant="minimal"
+                        height="40vh"
+                        background="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
+                        overlay="gradient"
+                        alignment="center"
+                    >
+                        <h1>Our Blog</h1>
+                        <p>Insights, tutorials, and the latest updates from our team</p>
+                    </bridge-hero-section>
+
+                    <!-- Blog Categories Filter -->
+                    <section class="section-padding">
+                        <div class="container">
+                            <div class="blog-filter">
+                                <button class="filter-button active" data-category="all">All Posts</button>
+                                <button class="filter-button" data-category="web-design">Web Design</button>
+                                <button class="filter-button" data-category="development">Development</button>
+                                <button class="filter-button" data-category="ui-ux">UI/UX</button>
+                                <button class="filter-button" data-category="tutorials">Tutorials</button>
+                                <button class="filter-button" data-category="news">News</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Featured Post -->
+                    <section class="section-padding bg-light">
+                        <div class="container">
+                            <h2 class="section-title">Featured Article</h2>
+                            
+                            <article class="featured-post">
+                                <div class="featured-post-image">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                        alt="The Future of Web Components"
+                                        loading="lazy"
+                                    >
+                                    <div class="featured-post-category">Web Design</div>
+                                </div>
+                                <div class="featured-post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">
+                                            <i class="far fa-calendar"></i>
+                                            January 15, 2025
+                                        </span>
+                                        <span class="post-author">
+                                            <i class="far fa-user"></i>
+                                            Sarah Johnson
+                                        </span>
+                                        <span class="post-reading-time">
+                                            <i class="far fa-clock"></i>
+                                            8 min read
+                                        </span>
+                                    </div>
+                                    <h2>The Future of Web Components: Building Scalable UI Libraries</h2>
+                                    <p>Web components represent a paradigm shift in how we build user interfaces. In this comprehensive guide, we explore the latest developments in web component technology and how they're revolutionizing modern web development.</p>
+                                    <bridge-button variant="primary">Read Full Article</bridge-button>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Blog Posts Grid -->
+                    <section class="section-padding">
+                        <div class="container">
+                            <h2 class="section-title">Latest Articles</h2>
+                            
+                            <div class="blog-grid">
+                                <article class="blog-post" data-category="development">
+                                    <div class="blog-post-image">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                            alt="CSS Grid Mastery"
+                                            loading="lazy"
+                                        >
+                                        <div class="blog-post-category">Development</div>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <div class="blog-post-meta">
+                                            <span class="blog-post-date">Jan 12, 2025</span>
+                                            <span class="blog-post-reading-time">5 min read</span>
+                                        </div>
+                                        <h3>CSS Grid Mastery: Advanced Layout Techniques</h3>
+                                        <p>Discover advanced CSS Grid techniques that will transform your layout skills and help you create stunning responsive designs.</p>
+                                        <div class="blog-post-author">
+                                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&h=40&q=80" alt="Author" class="author-avatar">
+                                            <span>Emily Rodriguez</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="blog-post" data-category="ui-ux">
+                                    <div class="blog-post-image">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                            alt="UX Design Principles"
+                                            loading="lazy"
+                                        >
+                                        <div class="blog-post-category">UI/UX</div>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <div class="blog-post-meta">
+                                            <span class="blog-post-date">Jan 10, 2025</span>
+                                            <span class="blog-post-reading-time">7 min read</span>
+                                        </div>
+                                        <h3>Essential UX Design Principles for 2025</h3>
+                                        <p>Learn the fundamental UX design principles that will guide your design decisions and create exceptional user experiences.</p>
+                                        <div class="blog-post-author">
+                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&h=40&q=80" alt="Author" class="author-avatar">
+                                            <span>Michael Chen</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="blog-post" data-category="tutorials">
+                                    <div class="blog-post-image">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                            alt="JavaScript Performance"
+                                            loading="lazy"
+                                        >
+                                        <div class="blog-post-category">Tutorials</div>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <div class="blog-post-meta">
+                                            <span class="blog-post-date">Jan 8, 2025</span>
+                                            <span class="blog-post-reading-time">6 min read</span>
+                                        </div>
+                                        <h3>JavaScript Performance Optimization Techniques</h3>
+                                        <p>A comprehensive guide to optimizing JavaScript performance, including practical tips and real-world examples.</p>
+                                        <div class="blog-post-author">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&h=40&q=80" alt="Author" class="author-avatar">
+                                            <span>Sarah Johnson</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="blog-post" data-category="web-design">
+                                    <div class="blog-post-image">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                            alt="Design Systems"
+                                            loading="lazy"
+                                        >
+                                        <div class="blog-post-category">Web Design</div>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <div class="blog-post-meta">
+                                            <span class="blog-post-date">Jan 5, 2025</span>
+                                            <span class="blog-post-reading-time">9 min read</span>
+                                        </div>
+                                        <h3>Building Scalable Design Systems</h3>
+                                        <p>Learn how to create and maintain design systems that scale with your organization and improve design consistency.</p>
+                                        <div class="blog-post-author">
+                                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&h=40&q=80" alt="Author" class="author-avatar">
+                                            <span>Alex Thompson</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="blog-post" data-category="news">
+                                    <div class="blog-post-image">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                            alt="Bridge Theme Update"
+                                            loading="lazy"
+                                        >
+                                        <div class="blog-post-category">News</div>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <div class="blog-post-meta">
+                                            <span class="blog-post-date">Jan 3, 2025</span>
+                                            <span class="blog-post-reading-time">3 min read</span>
+                                        </div>
+                                        <h3>Bridge Theme v2.0 Release Notes</h3>
+                                        <p>Discover the new features and improvements in Bridge Theme v2.0, including enhanced performance and new components.</p>
+                                        <div class="blog-post-author">
+                                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&h=40&q=80" alt="Author" class="author-avatar">
+                                            <span>Bridge Team</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="blog-post" data-category="development">
+                                    <div class="blog-post-image">
+                                        <img 
+                                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                                            alt="API Integration"
+                                            loading="lazy"
+                                        >
+                                        <div class="blog-post-category">Development</div>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <div class="blog-post-meta">
+                                            <span class="blog-post-date">Dec 30, 2024</span>
+                                            <span class="blog-post-reading-time">10 min read</span>
+                                        </div>
+                                        <h3>Modern API Integration Patterns</h3>
+                                        <p>Explore modern patterns for integrating APIs in web applications, including error handling and caching strategies.</p>
+                                        <div class="blog-post-author">
+                                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&h=40&q=80" alt="Author" class="author-avatar">
+                                            <span>David Kim</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Load More Button -->
+                            <div class="text-center" style="margin-top: 3rem;">
+                                <bridge-button variant="outline" size="large">Load More Posts</bridge-button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Newsletter Signup -->
+                    <section class="section-padding bg-light">
+                        <div class="container">
+                            <div class="newsletter-section">
+                                <h2>Stay Updated</h2>
+                                <p>Subscribe to our newsletter and never miss our latest articles and updates.</p>
+                                <form class="newsletter-form">
+                                    <bridge-input
+                                        type="email"
+                                        placeholder="Enter your email address"
+                                        required
+                                    ></bridge-input>
+                                    <bridge-button variant="primary" type="submit">Subscribe</bridge-button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <bridge-footer
+                columns="4"
+                copyright="© 2025 Bridge Theme. All rights reserved."
+                background="dark"
+            >
+                <div slot="column-1">
+                    <h4>Bridge Theme</h4>
+                    <p>Modern web components for building beautiful, accessible websites with native browser technologies.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div slot="column-2">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#web-design">Web Design</a></li>
+                        <li><a href="services.html#development">Development</a></li>
+                        <li><a href="services.html#branding">Branding</a></li>
+                        <li><a href="services.html#mobile-apps">Mobile Apps</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-3">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div slot="column-4">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </bridge-footer>
+
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <bridge-back-to-top></bridge-back-to-top>
+
+    <!-- Custom Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Blog filter functionality
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const blogPosts = document.querySelectorAll('.blog-post');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterCategory = this.dataset.category;
+                    
+                    // Show/hide posts based on category
+                    blogPosts.forEach(post => {
+                        if (filterCategory === 'all' || post.dataset.category === filterCategory) {
+                            post.style.display = 'block';
+                            post.style.animation = 'fadeIn 0.5s ease-in-out';
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('bridge-input').value;
+                if (email) {
+                    alert('Thank you for subscribing! We\'ll keep you updated with our latest posts.');
+                    this.querySelector('bridge-input').value = '';
+                }
+            });
+
+            console.log('🌉 Bridge Theme Blog page loaded!');
+        });
+    </script>
+</body>
+</html>

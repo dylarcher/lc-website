@@ -1,0 +1,92 @@
+/* Sackers Gothic Font Family */
+/* Complete font family with multiple format support for web compatibility */
+
+/* Sackers Gothic Light (300) */
+@font-face {
+  font-family: 'Sackers Gothic';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./sackers-gothic-std-light.woff2') format('woff2'),
+       url('./sackers-gothic-std-light.woff') format('woff'),
+       url('./sackers-gothic-std-light.ttf') format('truetype');
+}
+
+/* Sackers Gothic Regular/Medium (400) */
+@font-face {
+  font-family: 'Sackers Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./sackers-gothic-std.woff2') format('woff2'),
+       url('./sackers-gothic-std.woff') format('woff'),
+       url('./sackers-gothic-std.ttf') format('truetype'),
+       url('./sackers-gothic-std.eot') format('embedded-opentype'),
+       url('./sackers-gothic-std.svg#SackersGothicStd') format('svg');
+}
+
+/* Sackers Gothic Heavy (700) */
+@font-face {
+  font-family: 'Sackers Gothic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./sackers-gothic-std-heavy.woff2') format('woff2'),
+       url('./sackers-gothic-std-heavy.woff') format('woff'),
+       url('./sackers-gothic-std-heavy.ttf') format('truetype');
+}
+
+/* CSS Variables for Easy Usage */
+:root {
+  --font-sackers: 'Sackers Gothic', 'Times New Roman', serif;
+  --font-playfair: 'Playfair Display', 'Times New Roman', serif;
+}
+
+/* Utility Classes */
+.font-sackers {
+  font-family: var(--font-sackers);
+}
+
+.font-sackers-light {
+  font-family: var(--font-sackers);
+  font-weight: 300;
+}
+
+.font-sackers-regular {
+  font-family: var(--font-sackers);
+  font-weight: 400;
+}
+
+.font-sackers-heavy {
+  font-family: var(--font-sackers);
+  font-weight: 700;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.font-playfair-regular {
+  font-family: var(--font-playfair);
+  font-weight: 400;
+}
+
+.font-playfair-medium {
+  font-family: var(--font-playfair);
+  font-weight: 500;
+}
+
+.font-playfair-semibold {
+  font-family: var(--font-playfair);
+  font-weight: 600;
+}
+
+.font-playfair-bold {
+  font-family: var(--font-playfair);
+  font-weight: 700;
+}
+
+.font-playfair-black {
+  font-family: var(--font-playfair);
+  font-weight: 900;
+}
