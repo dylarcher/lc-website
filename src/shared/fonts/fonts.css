@@ -17,6 +17,12 @@
   --font-display: var(--font-playfair); /* For headings and display text */
   --font-serif: var(--font-playfair); /* For body text when serif is needed */
   --font-accent: var(--font-sackers); /* For special accent text */
+  --font-sans: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+  
+  /* Legacy Concierge Brand Font Mapping */
+  --lc-font-primary: var(--font-playfair);    /* Elegant serif for headlines */
+  --lc-font-secondary: var(--font-sans);      /* Clean sans-serif for body */
+  --lc-font-accent: var(--font-sackers);      /* Distinctive accent font */
   
   /* Font weights mapping */
   --font-weight-light: 300;

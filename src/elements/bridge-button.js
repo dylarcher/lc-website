@@ -1,3 +1,8 @@
+// Bridge Button Element
+// Replaces WordPress button functionality with web components
+
+import { Assets } from '../shared/helpers/asset-helper.js';
+
 class BridgeButton extends HTMLElement {
   constructor() {
     super();

@@ -1,6 +1,212 @@
 /* Bridge Theme Core Styles */
 /* Based on WordPress Bridge theme converted to vanilla CSS */
 
+/* ===== ICON LIBRARIES ===== */
+
+/* Import Linea Icons */
+@import url('../assets/icons/linea-icons/style.css');
+
+/* Import Elegant Icons */
+@import url('../assets/icons/elegant-icons/style.css');
+
+/* ===== ASSET VARIABLES ===== */
+
+:root {
+  /* Brand Assets */
+  --logo-main: url('../assets/images/legacy-concierge-logo.png');
+  --logo-signature: url('../assets/images/legacy-concierge-signature-logo.png');
+  --logo-company: url('../assets/images/company-logo.png');
+  --favicon: url('../assets/graphics/favicon.ico');
+  
+  /* UI Assets */
+  --icon-search: url('../assets/images/search_icon.png');
+  --icon-search-gray: url('../assets/images/search_icon_gray.png');
+  --icon-plus: url('../assets/images/plus.png');
+  --icon-plus-white: url('../assets/images/plus_white.png');
+  --icon-minus: url('../assets/images/minus.png');
+  --icon-back: url('../assets/images/back.png');
+  --icon-star: url('../assets/images/star.png');
+  
+  /* Navigation Assets */
+  --menu-arrow: url('../assets/images/content_menu_arrow.png');
+  --close-menu: url('../assets/images/close_side_menu.png');
+  --close-menu-dark: url('../assets/images/close_side_menu_dark.png');
+  
+  /* Slider Assets */
+  --slider-arrow-left: url('../assets/images/slider-arrow-left.png');
+  --slider-arrow-right: url('../assets/images/slider-arrow-right.png');
+  --slider-arrow-left-black: url('../assets/images/slider-arrow-left-black.png');
+  --slider-arrow-right-black: url('../assets/images/slider-arrow-right-black.png');
+  
+  /* Loading Assets */
+  --loader-gif: url('../assets/graphics/ajax-loader.gif');
+  
+  /* Social Media Assets */
+  --social-instagram: url('../assets/images/insta.png');
+  --social-linkedin: url('../assets/images/linkedin.png');
+  --social-web: url('../assets/images/web.png');
+  --social-phone: url('../assets/images/phone.png');
+  --social-location: url('../assets/images/location.png');
+}
+
+/* ===== LEGACY CONCIERGE BRAND VARIABLES ===== */
+
+:root {
+  /* Legacy Concierge Brand Colors - Premium Healthcare Palette */
+  --lc-primary: #1B4D7B;        /* Deep Professional Blue - Trust & Medical */
+  --lc-primary-light: #2E6AA3;  /* Lighter blue for hover states */
+  --lc-primary-dark: #0F3A5F;   /* Darker blue for depth */
+  
+  --lc-secondary: #8B4B6B;      /* Sophisticated Mauve - Warmth & Care */
+  --lc-secondary-light: #A56B87; /* Lighter mauve */
+  --lc-secondary-dark: #6F3B55;  /* Darker mauve */
+  
+  --lc-accent: #D4AF37;         /* Gold - Premium & Excellence */
+  --lc-accent-light: #E5C563;   /* Light gold */
+  --lc-accent-dark: #B8941F;    /* Dark gold */
+  
+  --lc-success: #2E8B57;        /* Medical Green - Health & Vitality */
+  --lc-warning: #DAA520;        /* Medical Orange - Attention */
+  --lc-error: #B22222;          /* Medical Red - Critical */
+  --lc-info: #4682B4;           /* Information Blue */
+  
+  /* Legacy Concierge Neutral Palette */
+  --lc-white: #FFFFFF;
+  --lc-cream: #F8F6F0;          /* Warm off-white */
+  --lc-light-gray: #E8E6E3;     /* Light warm gray */
+  --lc-gray: #B8B5B2;           /* Mid warm gray */
+  --lc-dark-gray: #6B6B6B;      /* Professional dark gray */
+  --lc-charcoal: #2C2C2C;       /* Deep charcoal for text */
+  --lc-black: #1A1A1A;          /* True black for contrast */
+  
+  /* Legacy Concierge Healthcare Gradients */
+  --lc-gradient-primary: linear-gradient(135deg, var(--lc-primary) 0%, var(--lc-primary-light) 100%);
+  --lc-gradient-warm: linear-gradient(135deg, var(--lc-secondary) 0%, var(--lc-accent-light) 100%);
+  --lc-gradient-trust: linear-gradient(135deg, var(--lc-primary-dark) 0%, var(--lc-info) 100%);
+  --lc-gradient-premium: linear-gradient(135deg, var(--lc-accent-dark) 0%, var(--lc-accent) 100%);
+  
+  /* Bridge Theme Compatibility - Map to Legacy Concierge Colors */
+  --bridge-primary: var(--lc-primary);
+  --bridge-primary-light: var(--lc-primary-light);
+  --bridge-primary-dark: var(--lc-primary-dark);
+  --bridge-secondary: var(--lc-secondary);
+  --bridge-accent: var(--lc-accent);
+  --bridge-success: var(--lc-success);
+  --bridge-warning: var(--lc-warning);
+  --bridge-danger: var(--lc-error);
+  --bridge-info: var(--lc-info);
+  
+  /* Text Colors */
+  --bridge-text-dark: var(--lc-charcoal);
+  --bridge-text-light: var(--lc-dark-gray);
+  --bridge-text-muted: var(--lc-gray);
+  --bridge-text-white: var(--lc-white);
+  --bridge-text-primary: var(--lc-primary);
+  
+  /* Background Colors */
+  --bridge-bg-white: var(--lc-white);
+  --bridge-bg-light: var(--lc-cream);
+  --bridge-bg-gray: var(--lc-light-gray);
+  --bridge-bg-dark: var(--lc-charcoal);
+  
+  /* Border Colors */
+  --bridge-border-light: var(--lc-light-gray);
+  --bridge-border-medium: var(--lc-gray);
+  --bridge-border-dark: var(--lc-dark-gray);
+  
+  /* Legacy Concierge Typography Scale */
+  --lc-font-family-primary: var(--font-serif, 'Playfair Display', Georgia, serif);
+  --lc-font-family-secondary: var(--font-sans, 'Raleway', -apple-system, sans-serif);
+  --lc-font-family-accent: var(--font-accent, 'Sackers Gothic', serif);
+  
+  /* Healthcare-focused Typography Weights */
+  --lc-font-weight-light: 300;      /* For elegant display text */
+  --lc-font-weight-normal: 400;     /* Body text, accessible reading */
+  --lc-font-weight-medium: 500;     /* Subtle emphasis */
+  --lc-font-weight-semibold: 600;   /* Section headers */
+  --lc-font-weight-bold: 700;       /* Strong emphasis, CTAs */
+  --lc-font-weight-extrabold: 800;  /* Hero headlines */
+  --lc-font-weight-black: 900;      /* Brand statements */
+  
+  /* Legacy Concierge Spacing Scale - Professional Healthcare */
+  --lc-spacing-xs: 0.25rem;    /* 4px - Fine details */
+  --lc-spacing-sm: 0.5rem;     /* 8px - Small gaps */
+  --lc-spacing-md: 1rem;       /* 16px - Standard spacing */
+  --lc-spacing-lg: 1.5rem;     /* 24px - Comfortable spacing */
+  --lc-spacing-xl: 2rem;       /* 32px - Section spacing */
+  --lc-spacing-2xl: 3rem;      /* 48px - Large sections */
+  --lc-spacing-3xl: 4rem;      /* 64px - Major sections */
+  --lc-spacing-4xl: 6rem;      /* 96px - Page sections */
+  --lc-spacing-5xl: 8rem;      /* 128px - Hero sections */
+  
+  /* Map to Bridge spacing system */
+  --bridge-spacing-xs: var(--lc-spacing-xs);
+  --bridge-spacing-sm: var(--lc-spacing-sm);
+  --bridge-spacing-md: var(--lc-spacing-md);
+  --bridge-spacing-lg: var(--lc-spacing-lg);
+  --bridge-spacing-xl: var(--lc-spacing-xl);
+  --bridge-spacing-2xl: var(--lc-spacing-2xl);
+  --bridge-spacing-3xl: var(--lc-spacing-3xl);
+  --bridge-spacing-4xl: var(--lc-spacing-4xl);
+  --bridge-spacing-5xl: var(--lc-spacing-5xl);
+  
+  /* Legacy Concierge Shadows - Subtle & Professional */
+  --lc-shadow-subtle: 0 1px 3px rgba(27, 77, 123, 0.08);
+  --lc-shadow-soft: 0 4px 12px rgba(27, 77, 123, 0.12);
+  --lc-shadow-medium: 0 8px 24px rgba(27, 77, 123, 0.15);
+  --lc-shadow-strong: 0 16px 48px rgba(27, 77, 123, 0.20);
+  --lc-shadow-dramatic: 0 24px 64px rgba(27, 77, 123, 0.25);
+  
+  /* Map to Bridge shadow system */
+  --bridge-shadow-sm: var(--lc-shadow-subtle);
+  --bridge-shadow-md: var(--lc-shadow-soft);
+  --bridge-shadow-lg: var(--lc-shadow-medium);
+  --bridge-shadow-xl: var(--lc-shadow-strong);
+  
+  /* Legacy Concierge Border Radius - Clean & Professional */
+  --lc-radius-sm: 4px;     /* Subtle rounding */
+  --lc-radius-md: 8px;     /* Standard components */
+  --lc-radius-lg: 12px;    /* Cards and containers */
+  --lc-radius-xl: 16px;    /* Large components */
+  --lc-radius-2xl: 24px;   /* Hero sections */
+  --lc-radius-full: 50px;  /* Pills and badges */
+  
+  /* Map to Bridge radius system */
+  --bridge-radius-sm: var(--lc-radius-sm);
+  --bridge-radius-md: var(--lc-radius-md);
+  --bridge-radius-lg: var(--lc-radius-lg);
+  --bridge-radius-xl: var(--lc-radius-xl);
+  --bridge-radius-full: var(--lc-radius-full);
+  
+  /* Legacy Concierge Transitions - Smooth & Professional */
+  --lc-transition-fast: 0.15s ease-in-out;
+  --lc-transition-base: 0.3s ease-in-out;
+  --lc-transition-slow: 0.5s ease-in-out;
+  --lc-transition-bounce: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Map to Bridge transition system */
+  --bridge-transition-fast: var(--lc-transition-fast);
+  --bridge-transition-base: var(--lc-transition-base);
+  --bridge-transition-slow: var(--lc-transition-slow);
+  
+  /* Legacy Concierge Z-index Scale */
+  --lc-z-base: 0;
+  --lc-z-dropdown: 100;
+  --lc-z-sticky: 200;
+  --lc-z-overlay: 300;
+  --lc-z-modal: 400;
+  --lc-z-toast: 500;
+  --lc-z-tooltip: 600;
+  
+  /* Map to Bridge z-index system */
+  --bridge-z-base: var(--lc-z-base);
+  --bridge-z-dropdown: var(--lc-z-dropdown);
+  --bridge-z-sticky: var(--lc-z-sticky);
+  --bridge-z-overlay: var(--lc-z-overlay);
+  --bridge-z-modal: var(--lc-z-modal);
+  --bridge-z-fixed: var(--lc-z-sticky);
+}
+
 /* ===== ACCESSIBILITY STYLES ===== */
 
 /* Screen reader only content */
@@ -29,6 +235,82 @@
 :focus-visible {
   outline: 2px solid var(--bridge-primary, #1abc9c);
   outline-offset: 2px;
+}
+
+/* Legacy Concierge Typography System */
+body {
+  font-family: var(--lc-font-family-secondary);
+  font-weight: var(--lc-font-weight-normal);
+  line-height: 1.6;
+  color: var(--lc-charcoal);
+  background-color: var(--lc-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--lc-font-family-primary);
+  font-weight: var(--lc-font-weight-semibold);
+  line-height: 1.2;
+  margin-bottom: var(--lc-spacing-lg);
+  color: var(--lc-primary-dark);
+}
+
+h1 { 
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: var(--lc-font-weight-bold);
+}
+
+h2 { 
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  font-weight: var(--lc-font-weight-bold);
+}
+
+h3 { 
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: var(--lc-font-weight-semibold);
+}
+
+h4 { 
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+  font-weight: var(--lc-font-weight-semibold);
+}
+
+h5 { 
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: var(--lc-font-weight-medium);
+}
+
+h6 { 
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: var(--lc-font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Legacy Concierge Accent Typography */
+.lc-accent-text {
+  font-family: var(--lc-font-family-accent);
+  font-weight: var(--lc-font-weight-normal);
+  color: var(--lc-accent-dark);
+}
+
+.lc-brand-text {
+  font-family: var(--lc-font-family-accent);
+  font-weight: var(--lc-font-weight-bold);
+  color: var(--lc-primary);
+}
+
+/* Healthcare-focused text styles */
+.lc-medical-text {
+  font-family: var(--lc-font-family-secondary);
+  font-weight: var(--lc-font-weight-medium);
+  color: var(--lc-primary-dark);
+  letter-spacing: 0.025em;
+}
+
+.lc-premium-text {
+  font-family: var(--lc-font-family-primary);
+  font-style: italic;
+  color: var(--lc-accent-dark);
 }
 
 /* High contrast mode support */

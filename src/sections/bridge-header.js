@@ -1,6 +1,8 @@
 // Bridge Header Component
 // Replaces WordPress header functionality with web components
 
+import { Assets } from '../shared/helpers/asset-helper.js';
+
 class BridgeHeader extends HTMLElement {
   constructor() {
     super();
@@ -148,17 +150,35 @@ class BridgeHeader extends HTMLElement {
         }
 
         .bridge-logo {
-          font-size: 1.5rem;
-          font-weight: var(--bridge-font-bold, 700);
-          color: ${background === 'dark' || transparent ? 
-            'var(--bridge-text-white, #ffffff)' : 
-            'var(--bridge-text-dark, #333333)'};
+          display: flex;
+          align-items: center;
           text-decoration: none;
           transition: var(--bridge-transition-base, all 0.3s ease);
           z-index: 1001;
         }
 
-        .bridge-logo:hover {
+        .bridge-logo img {
+          height: 40px;
+          width: auto;
+          max-width: 200px;
+          object-fit: contain;
+          transition: var(--bridge-transition-base, all 0.3s ease);
+        }
+
+        .bridge-logo:hover img {
+          transform: scale(1.05);
+        }
+
+        .bridge-logo-text {
+          font-size: 1.5rem;
+          font-weight: var(--bridge-font-bold, 700);
+          color: ${background === 'dark' || transparent ? 
+            'var(--bridge-text-white, #ffffff)' : 
+            'var(--bridge-text-dark, #333333)'};
+          margin-left: var(--bridge-spacing-sm, 0.75rem);
+        }
+
+        .bridge-logo:hover .bridge-logo-text {
           color: var(--bridge-primary, #1abc9c);
         }
 
@@ -272,7 +292,10 @@ class BridgeHeader extends HTMLElement {
       <header class="bridge-header variant-${variant}">
         <nav class="bridge-navigation">
           <div class="nav-top">
-            <a href="/" class="bridge-logo">${logo}</a>
+            <a href="/" class="bridge-logo">
+              <img src="${Assets.brand.logo()}" alt="${logo}" />
+              <span class="bridge-logo-text">${logo}</span>
+            </a>
             <button class="mobile-toggle" aria-label="Toggle navigation">
               <i class="fas fa-bars"></i>
             </button>
