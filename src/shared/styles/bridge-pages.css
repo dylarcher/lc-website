@@ -10,9 +10,7 @@
 
 /* Hero Section */
 .explore-hero {
-  background: linear-gradient(135deg, 
-    var(--bridge-primary, #667eea) 0%, 
-    var(--bridge-secondary, #764ba2) 100%);
+  background: var(--lc-gradient-wellness);
   color: white;
   padding: var(--bridge-spacing-6xl, 6rem) 0 var(--bridge-spacing-5xl, 5rem);
   margin-top: 0;

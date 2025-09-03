@@ -169,17 +169,27 @@ class BridgeHeader extends HTMLElement {
           transform: scale(1.05);
         }
 
-        .bridge-logo-text {
-          font-size: 1.5rem;
-          font-weight: var(--bridge-font-bold, 700);
-          color: ${background === 'dark' || transparent ? 
-            'var(--bridge-text-white, #ffffff)' : 
-            'var(--bridge-text-dark, #333333)'};
+        .logo-content {
+          display: flex;
+          flex-direction: column;
           margin-left: var(--bridge-spacing-sm, 0.75rem);
+          align-items: flex-start;
         }
 
-        .bridge-logo:hover .bridge-logo-text {
-          color: var(--bridge-primary, #1abc9c);
+        .lc-logo-text {
+          font-size: 2rem;
+          line-height: 1;
+          margin-bottom: 2px;
+        }
+
+        .lc-tagline {
+          font-size: 0.6rem;
+          line-height: 1;
+          margin: 0;
+        }
+
+        .bridge-logo:hover .lc-logo-text {
+          color: var(--lc-primary-light);
         }
 
         .menu-container {
@@ -294,7 +304,10 @@ class BridgeHeader extends HTMLElement {
           <div class="nav-top">
             <a href="/" class="bridge-logo">
               <img src="${Assets.brand.logo()}" alt="${logo}" />
-              <span class="bridge-logo-text">${logo}</span>
+              <div class="logo-content">
+                <span class="lc-logo-text">Lc</span>
+                <span class="lc-tagline">YOUR HEALTH. OUR PURPOSE.</span>
+              </div>
             </a>
             <button class="mobile-toggle" aria-label="Toggle navigation">
               <i class="fas fa-bars"></i>
