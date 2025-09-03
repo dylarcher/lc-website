@@ -1,0 +1,44 @@
+{
+  "name": "@legacy-concierge/web-components-tests",
+  "version": "1.0.0",
+  "description": "Test suite for Legacy Concierge Web Components",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:units": "jest test/units",
+    "test:components": "jest test/units/components",
+    "test:elements": "jest test/units/elements", 
+    "test:sections": "jest test/units/sections",
+    "test:integration": "jest test/suites",
+    "test:e2e": "jest test/e2e",
+    "test:ci": "jest --ci --coverage --watchAll=false"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "identity-obj-proxy": "^3.0.0"
+  },
+  "jest": {
+    "preset": "./jest.config.js"
+  },
+  "keywords": [
+    "web-components",
+    "healthcare",
+    "legacy-concierge",
+    "testing",
+    "jest",
+    "accessibility"
+  ],
+  "author": "Legacy Concierge Development Team",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dylarcher/lc-website.git",
+    "directory": "test"
+  }
+}
